@@ -42,16 +42,16 @@ const Home5_1 = () => {
   }
 
   return (
-    <div className="w-full h-[780px] bg-[#0a1650]">
+    <div className="w-full h-[780px] bg-[#0a1650] mt-[-1px]">
       <div className='flex pt-[70px] gap-[15%] ml-[9%]'>
         <div className='w-[436px] flex flex-col'>
           <div className='text-[#fff] text-[80px] font-semibold'>CHAT WITH</div>
           <div className='text-[#fff] text-[80px] mt-[-50px] font-semibold'>YOUR AI</div>
           <div className='text-[#fff] text-[80px] mt-[-50px] font-thin'>ANYTIME</div>
-          <div className='text-[#fff] text-[80px]  mt-[-50px] font-thin'>ANYWHERE</div>
+          <div className='text-[#fff] text-[80px] mt-[-50px] font-thin'>ANYWHERE</div>
           <div className='text-[#fff] text-[24px] mt-[-10px] font-light'>"Shape your AI companion—choose your style, voice, and personality (e.g., "Empathetic Listener")—and chat to ease your loneliness. Your talks earn ME tokens via Train-to-Earn, growing your emotional ally with the community's support, all on your device!"</div>
         </div>
-        <div className="flex justify-center items-center relative h-[800px] ">
+        <div className="flex justify-center items-center relative h-[800px]">
           <img
             src={mobile_1}
             alt=""
@@ -67,7 +67,7 @@ const Home5_1 = () => {
             alt=""
             className={`transition-all duration-1000 ease-in-out ${getPositionClasses(positions[2])}`}
           />
-          <img src={pint} alt="" className='absolute max-w-none top-[-100px] left-[-350px] w-[500px] h-[500px] ' />
+          <img src={pint} alt="" className='absolute max-w-none top-[-100px] left-[-350px] w-[500px] h-[500px]' />
           <img src={pint} alt="" className='absolute max-w-none bottom-[0px] right-[-350px] w-[500px] h-[500px]' />
         </div>
       </div>

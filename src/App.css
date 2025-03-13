@@ -1,0 +1,25 @@
+/* 添加缩放容器的样式 */
+.scale-container {
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* 确保缩放后的内容不会被裁剪 */
+main {
+  transform-origin: top left;
+  position: relative;
+}
+
+/* 防止内容溢出 */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* 确保页面可以正常滚动 */
+html, body {
+  height: auto;
+  min-height: 100%;
+}
