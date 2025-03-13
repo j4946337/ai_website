@@ -50,7 +50,7 @@ const Home8 = () => {
           <div className="flex flex-col items-end">
             <div className="text-[#ffffff] text-[20px] font-semibold float-right">Q4 2027</div>
             <div className="text-[#ffffff] text-[20px] font-semibold mt-[-10px] float-right">Modes & 1M Users</div>
-            <div className='w-[136px] text-[#cdcdcd] text-[18px] font-light leading-5 float-right'>Your AI adds Calm, Inspire, Connect modes—your DAO scales us to 1M users on TikTok, Twitch, healing your world.</div>
+            <div className='w-[136px] text-[#cdcdcd] text-[18px] font-light leading-5 text-right'>Your AI adds Calm, Inspire, Connect modes—your DAO scales us to 1M users on TikTok, Twitch, healing your world.</div>
           </div>
           <div className='relative'>
             <img src={rp_3} alt="rp_3" className="w-[118px] h-[228px]" />
