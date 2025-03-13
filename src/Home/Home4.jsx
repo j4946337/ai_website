@@ -6,7 +6,7 @@ import RIGHT_DOWN from "../assets/images/Ai_C_5.png"
 import PEOPLE from "../assets/images/Ai_C_6.png"
 const Home4 = () => {
   return (
-    <div className="w-full h-auto min-h-[1687px] bg-[#0a1650] relative overflow-hidden py-10">
+    <div className="w-full h-auto min-h-[1687px] bg-[#0a1650] relative overflow-hidden py-10 mt-[-1px]">
       <img src={BRAIN} className="absolute mx-auto top-[239px] left-[50%] translate-x-[-55%] w-auto" alt="" />
       <div className="flex flex-col items-center pt-[95px] px-4">
         <p className="text-[#ffffff] text-[80px] font-semibold text-center">YOUR LIBERATION</p>
