@@ -39,16 +39,18 @@ function App() {
       for (let i = 0; i < children.length; i++) {
         const child = children[i];
         const rect = child.getBoundingClientRect();
-        const bottom = child.offsetTop + rect.height;
+        // 使用 getBoundingClientRect 获取的高度已经考虑了缩放
+        // 所以需要除以当前缩放比例得到实际高度
+        const bottom = child.offsetTop + (rect.height / scale);
         if (bottom > maxBottom) {
           maxBottom = bottom;
         }
       }
 
       // 设置容器高度为最大底部位置加上一些额外空间
-      return maxBottom - 10; // 添加100px的额外空间
+      return maxBottom; // 增加额外空间到200px
     }
-    return 6400; // 如果无法计算，则返回默认高度
+    return 6500; // 如果无法计算，则返回默认高度
   }
 
   useEffect(() => {
@@ -59,17 +61,27 @@ function App() {
     window.addEventListener('resize', calculateScale);
 
     // 页面加载完成后计算实际内容高度
-    const timer = setTimeout(() => {
+    const calculateHeight = () => {
       const actualHeight = calculateContentHeight();
       setContentHeight(actualHeight);
-    }, 1000); // 延迟1秒，确保所有内容都已加载
+    };
+
+    // 初次加载后计算
+    calculateHeight();
+
+    // 设置一个定时器，在所有资源加载完成后再次计算
+    const timer = setTimeout(calculateHeight, 1000);
+
+    // 添加窗口大小变化时重新计算高度
+    window.addEventListener('resize', calculateHeight);
 
     // 清理函数
     return () => {
       window.removeEventListener('resize', calculateScale);
+      window.removeEventListener('resize', calculateHeight);
       clearTimeout(timer);
     }
-  }, []);
+  }, [scale]);
 
   return (
     <div
