@@ -26,7 +26,7 @@ const Home8 = () => {
             </div>
           </div>
           <div className="flex flex-col">
-            <div className="text-[#ffffff] text-[20px] font-semibold">Q1 2025</div>
+            <div className="text-[#ffffff] text-[20px] font-semibold">Q2 2025</div>
             <div className="text-[#ffffff] text-[20px] font-semibold mt-[-10px]">H5 Beta </div>
             <div className='w-[175px] text-[#cdcdcd] text-[18px] font-light leading-5'>Your H5 prototype launches—customize your AI, earn ME tokens, and shape our companion with your community's input.</div>
           </div>

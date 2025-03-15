@@ -5,16 +5,16 @@ import me_cloud from '../assets/images/Ai_D_10.png'
 const Home6 = () => {
   return (
     <div className='w-full h-auto min-h-[775px] bg-[#0a1650] relative overflow-hidden py-10 mt-[-1px]'>
-      <img src={me_imf} alt="me_imf" className='w-full absolute bottom-0 left-0' />
-      <div className='mx-auto pt-[80px] w-[44%] px-0 text-center'>
-        <div className='text-[#ffffff] text-[80px] font-semibold'>YOUR TECH EDGE</div>
-        <div className='text-[#94a4f2] text-[38px] font-light mt-[-30px]'>Powering Your Emotional Future</div>
+      <img src={me_imf} alt="me_imf" className='w-full absolute bottom-0 left-0 z-0' />
+      <div className='mx-auto pt-[80px] w-[44%] px-0 text-center z-[100] relative'>
+        <div className='text-[#ffffff] text-[80px] font-semibold z-[100]'>YOUR TECH EDGE</div>
+        <div className='text-[#94a4f2] text-[38px] font-light mt-[-30px] z-[100]'>Powering Your Emotional Future</div>
       </div>
 
       {/* Desktop version */}
       <div className='flex mt-[63px] flex-col gap-[19px]'>
         <div className='w-[56%] h-[121px] bg-[#7edaeb33] rounded-r-full ml-[17%] relative'>
-          <img src={me_brain} alt="me_brain" className='absolute translate-x-[-50%]' />
+          <img src={me_brain} alt="me_brain" className='absolute translate-x-[-50%] translate-y-[-12%]' />
           <div className='ml-[13%] w-[64%] mt-[13px]'>
             <div className='text-[#ffffff] text-[26px] font-semibold'>On-Chain LLM</div>
             <div className='text-[#ffffff] text-[22px] font-light mt-[-10px] leading-7'>
@@ -32,7 +32,7 @@ const Home6 = () => {
           </div>
         </div>
         <div className='w-[56%] h-[121px] bg-[#7edaeb33] rounded-r-full ml-[17%] relative'>
-          <img src={me_cloud} alt="me_cloud" className='absolute translate-x-[-50%]' />
+          <img src={me_cloud} alt="me_cloud" className='absolute translate-x-[-50%] translate-y-[-15%]' />
           <div className='ml-[13%] w-[64%] mt-[25px]'>
             <div className='text-[#ffffff] text-[26px] font-semibold'>MCP & OpenAPI</div>
             <div className='text-[#ffffff] text-[22px] font-light mt-[-10px] leading-7'>

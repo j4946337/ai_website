@@ -1,7 +1,6 @@
 import './App.css'
 import { useRef, useState, useEffect } from 'react'
 import Header from './Header/Header'
-import home_2 from './assets/images/home_2_1.png'
 import Home2 from './Home/Home2'
 import Home1 from './Home/Home1'
 import Home3 from './Home/Home3'
@@ -15,15 +14,15 @@ import Home5_1 from './Home/Home5_1'
 function App() {
   const containerRef = useRef(null)
   const [scale, setScale] = useState(1)
-  const [containerWidth, setContainerWidth] = useState(1520) // 设计稿宽度
-  const [contentHeight, setContentHeight] = useState(6500) // 初始高度值
+  const [containerWidth, setContainerWidth] = useState(320) // 设计稿宽度
+  const [contentHeight, setContentHeight] = useState(6386) // 初始高度值
 
   // 计算缩放比例
   const calculateScale = () => {
     if (containerRef.current) {
       const windowWidth = window.innerWidth
       // 计算缩放比例，但设置最小值为0.5，防止内容过小
-      const newScale = Math.max(windowWidth / containerWidth, 0.5)
+      const newScale = Math.max(windowWidth / containerWidth, 0.1)
       setScale(newScale)
     }
   }
@@ -100,7 +99,7 @@ function App() {
           transformOrigin: 'top left'
         }}
       >
-        <img src={home_2} alt="home_2" className='absolute home_2_1 h-[1171px] top-[515px] bg-transparent z-1' />
+
         <Header />
         <Home1 />
         <Home2 />
