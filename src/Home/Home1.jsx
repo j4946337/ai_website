@@ -2,13 +2,44 @@ import HOME_1 from "../assets/images/home_1_1.png";
 import HOME_1_2 from "../assets/images/bg.png";
 import HOME_1_2_1 from "../assets/images/Ai_A_11_mbile.png";
 import home_2 from '../assets/images/home_2_1.png'
+import { useEffect, useState, useRef } from 'react';
 
 const Home1 = () => {
+  const [isPage1Visible, setIsPage1Visible] = useState(false);
+  const [isPage2Visible, setIsPage2Visible] = useState(false);
+
+  const page1Ref = useRef(null);
+  const page2Ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.target === page1Ref.current && entry.isIntersecting) {
+          setIsPage1Visible(true);
+        } else if (entry.target === page2Ref.current && entry.isIntersecting) {
+          setIsPage2Visible(true);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    if (page1Ref.current) observer.observe(page1Ref.current);
+    if (page2Ref.current) observer.observe(page2Ref.current);
+
+    return () => {
+      if (page1Ref.current) observer.unobserve(page1Ref.current);
+      if (page2Ref.current) observer.unobserve(page2Ref.current);
+    };
+  }, []);
+
   return (
     <div className="home_1 w-full bg-[#0a1650] h-[910px] relative mt-[-1px]">
-      <img src={HOME_1_2_1} alt="home_1_2" className='absolute top-0 left-0 w-full z-10 ' />
+      {/*  Page 1_1 */}
+      <img src={HOME_1_2_1} alt="home_1_2" className='absolute top-0 left-0 w-full z-10' />
 
-      <div className="absolute top-[307px] left-[50%] translate-x-[-50%] z-50 w-[211px]">
+      <div
+        ref={page1Ref}
+        className={`absolute top-[307px] left-[50%] translate-x-[-50%] z-50 w-[211px] transition-opacity duration-[4000ms] ${isPage1Visible ? 'opacity-100' : 'opacity-0'}`}
+      >
         <p className="text-[#ffffff] text-[28px] leading-[13px] font-semibold mb-[10px]  text-center">
           WELCOME TO
         </p>
@@ -30,7 +61,10 @@ const Home1 = () => {
       </div>
       {/* Page 1_2 */}
       <img src={home_2} alt="home_2" className='absolute home_2_1 top-[480px] w-[80%] z-1' />
-      <div className="absolute  top-[657px] left-[104px] z-10">
+      <div
+        ref={page2Ref}
+        className={`absolute top-[657px] left-[104px] z-10 transition-opacity duration-[4000ms] ${isPage2Visible ? 'opacity-100' : 'opacity-0'}`}
+      >
         <div className="text-[#ffffff] text-[34px] leading-[34px] font-semibold ">
           <span className="block  text-right">THE </span>
           <span className="block  text-right">
