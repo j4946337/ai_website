@@ -14,7 +14,7 @@ const Header = () => {
               <img
                 src={descriptionIcon}
                 alt="litepaper"
-                className="w-[11px] h-[13px] font-medium"
+                className="w-[15px] h-[15px] font-medium"
               />
             </span>
           </li>
@@ -23,7 +23,7 @@ const Header = () => {
               <img
                 src={languageIcon}
                 alt="language"
-                className="w-[15] h-[15px] font-medium"
+                className="w-[15px] h-[15px] font-medium"
               />
             </span>{" "}
 
