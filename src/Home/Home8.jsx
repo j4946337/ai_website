@@ -89,19 +89,19 @@ const Home8 = () => {
               src={rp_1}
               alt=""
               className={`w-[54px] h-[103px] absolute transition-all duration-[1200ms] ${isPhase1Visible
-                ? 'opacity-100 scale-100 translate-x-0'
-                : 'opacity-0 scale-50 -translate-x-[30px]'
+                ? 'opacity-100 scale-100 translate-y-0'
+                : 'opacity-0 scale-0 translate-y-[100%]'
                 }`}
+              style={{ transformOrigin: 'bottom center' }}
             />
           </div>
           <img
             src={point}
             alt=""
-            className={`absolute bottom-[-10px] w-[15px] left-[20px] translate-x-[-4%] h-[15px] transition-all duration-[1200ms] ${isPhase1Visible
-              ? "opacity-100 scale-100 translate-x-0"
-              : "opacity-0 scale-50 -translate-x-[30px]"
+            className={`absolute bottom-[-10px] w-[15px] left-[20px] translate-x-[-4%] h-[15px] transition-all duration-[800ms] ${isPhase1Visible
+              ? "opacity-100 scale-100"
+              : "opacity-0 scale-0"
               }`}
-            style={{ transitionDelay: '100ms' }}
           />
           <div className={`flex flex-col transition-opacity duration-[1000ms] ${isPhase1Visible ? "opacity-100" : "opacity-0"}`}>
             <p className='text-[#fff] text-[12px] leading-[12px] font-semibold'>Q2 2025</p>
@@ -127,19 +127,19 @@ const Home8 = () => {
               src={rp_2}
               alt=""
               className={`w-[54px] h-[103px] absolute transition-all duration-[1200ms] ${isPhase2Visible
-                ? 'opacity-100 scale-100 translate-x-0'
-                : 'opacity-0 scale-50 -translate-x-[30px]'
+                ? 'opacity-100 scale-100 translate-y-0'
+                : 'opacity-0 scale-0 translate-y-[100%]'
                 }`}
+              style={{ transformOrigin: 'bottom center' }}
             />
           </div>
           <img
             src={point}
             alt=""
-            className={`absolute bottom-[-10px] w-[15px] left-[20px] translate-x-[-4%] h-[15px] transition-all duration-[1200ms] ${isPhase2Visible
-              ? "opacity-100 scale-100 translate-x-0"
-              : "opacity-0 scale-50 -translate-x-[30px]"
+            className={`absolute bottom-[-10px] w-[15px] left-[20px] translate-x-[-4%] h-[15px] transition-all duration-[800ms] ${isPhase2Visible
+              ? "opacity-100 scale-100"
+              : "opacity-0 scale-0"
               }`}
-            style={{ transitionDelay: '100ms' }}
           />
           <div className={`flex flex-col transition-opacity duration-[1000ms] ${isPhase2Visible ? "opacity-100" : "opacity-0"}`}>
             <p className='text-[#fff] text-[12px] leading-[12px] font-semibold'>Q3 2025</p>
@@ -165,19 +165,19 @@ const Home8 = () => {
               src={rp_3}
               alt=""
               className={`w-[54px] h-[103px] absolute transition-all duration-[1200ms] ${isPhase3Visible
-                ? 'opacity-100 scale-100 translate-x-0'
-                : 'opacity-0 scale-50 -translate-x-[30px]'
+                ? 'opacity-100 scale-100 translate-y-0'
+                : 'opacity-0 scale-0 translate-y-[100%]'
                 }`}
+              style={{ transformOrigin: 'bottom center' }}
             />
           </div>
           <img
             src={point}
             alt=""
-            className={`absolute bottom-[-10px] w-[15px] left-[20px] translate-x-[-4%] h-[15px] transition-all duration-[1200ms] ${isPhase3Visible
-              ? "opacity-100 scale-100 translate-x-0"
-              : "opacity-0 scale-50 -translate-x-[30px]"
+            className={`absolute bottom-[-10px] w-[15px] left-[20px] translate-x-[-4%] h-[15px] transition-all duration-[800ms] ${isPhase3Visible
+              ? "opacity-100 scale-100"
+              : "opacity-0 scale-0"
               }`}
-            style={{ transitionDelay: '100ms' }}
           />
           <div className={`flex flex-col transition-opacity duration-[1000ms] ${isPhase3Visible ? "opacity-100" : "opacity-0"}`}>
             <p className='text-[#fff] text-[12px] leading-[12px] font-semibold'>Q2 2026</p>
@@ -203,19 +203,19 @@ const Home8 = () => {
               src={rp_4}
               alt=""
               className={`w-[54px] h-[103px] absolute transition-all duration-[1200ms] ${isPhase4Visible
-                ? 'opacity-100 scale-100 translate-x-0'
-                : 'opacity-0 scale-50 -translate-x-[30px]'
+                ? 'opacity-100 scale-100 translate-y-0'
+                : 'opacity-0 scale-0 translate-y-[100%]'
                 }`}
+              style={{ transformOrigin: 'bottom center' }}
             />
           </div>
           <img
             src={point}
             alt=""
-            className={`absolute bottom-[-10px] w-[15px] left-[20px] translate-x-[-4%] h-[15px] transition-all duration-[1200ms] ${isPhase4Visible
-              ? "opacity-100 scale-100 translate-x-0"
-              : "opacity-0 scale-50 -translate-x-[30px]"
+            className={`absolute bottom-[-10px] w-[15px] left-[20px] translate-x-[-4%] h-[15px] transition-all duration-[800ms] ${isPhase4Visible
+              ? "opacity-100 scale-100"
+              : "opacity-0 scale-0"
               }`}
-            style={{ transitionDelay: '100ms' }}
           />
           <div className={`flex flex-col transition-opacity duration-[1000ms] ${isPhase4Visible ? "opacity-100" : "opacity-0"}`}>
             <p className='text-[#fff] text-[12px] leading-[12px] font-semibold'>Q4 2027</p>
