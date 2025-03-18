@@ -53,10 +53,12 @@ const Home4 = () => {
           setIsPeopleVisible(true);
         } else if (entry.target === section1Ref.current && entry.isIntersecting) {
           setIsSection1Visible(true);
-        } else if (entry.target === section2Ref.current && entry.isIntersecting) {
-          setIsSection2Visible(true);
-        } else if (entry.target === section3Ref.current && entry.isIntersecting) {
-          setIsSection3Visible(true);
+          setTimeout(() => {
+            setIsSection2Visible(true);
+            setTimeout(() => {
+              setIsSection3Visible(true);
+            }, 300);
+          }, 300);
         }
       });
     }, { threshold: 0.3 });
@@ -97,10 +99,18 @@ const Home4 = () => {
       </div>
       <div
         ref={titleRef}
-        className={`flex flex-col items-center transition-opacity duration-[4000ms] ${isTitleVisible ? 'opacity-100' : 'opacity-0'}`}
+        className={`flex flex-col items-center ${isTitleVisible ? '' : ''}`}
       >
-        <p className="text-[#ffffff] text-[34px] leading-[30px] w-[186px] font-semibold text-center">YOUR LIBERATION</p>
-        <p className="text-[#94a4f2] text-[17px] font-light text-center">ME AI  |  Your Freedom</p>
+        <p
+          className={`text-[#ffffff] text-[34px] leading-[30px] w-[186px] font-semibold text-center transition-all duration-[1200ms] ${isTitleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[30px]'}`}
+        >
+          YOUR LIBERATION
+        </p>
+        <p
+          className={`text-[#94a4f2] text-[17px] font-light text-center transition-opacity duration-[4000ms] ${isTitleVisible ? 'opacity-100' : 'opacity-0'}`}
+        >
+          ME AI  |  Your Freedom
+        </p>
       </div>
 
 
@@ -149,7 +159,7 @@ const Home4 = () => {
         <div className="flex flex-col gap-[20px]">
           <div
             ref={section1Ref}
-            className={`flex flex-col ml-[35px] transition-opacity duration-[4000ms] ${isSection1Visible ? 'opacity-100' : 'opacity-0'}`}
+            className={`flex flex-col ml-[35px] transition-all duration-[1000ms] ${isSection1Visible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-[20px]'}`}
           >
             <p className="font-semibold text-[#ffffff] text-[20px] leading-[20px]">Craft Your Ally</p>
             <p className="text-[#ff6b4c] text-[15px] leading-[15px]">Make It Yours</p>
@@ -157,7 +167,7 @@ const Home4 = () => {
           </div>
           <div
             ref={section2Ref}
-            className={`flex flex-col ml-[35px] transition-opacity duration-[4000ms] ${isSection2Visible ? 'opacity-100' : 'opacity-0'}`}
+            className={`flex flex-col ml-[35px] transition-all duration-[1000ms] ${isSection2Visible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-[20px]'}`}
           >
             <p className="font-semibold text-[#ffffff] text-[20px] leading-[20px]">Grow Your EQ</p>
             <p className="text-[#ff6b4c] text-[15px] leading-[15px]">Feel the Growth</p>
@@ -165,7 +175,7 @@ const Home4 = () => {
           </div>
           <div
             ref={section3Ref}
-            className={`flex flex-col ml-[35px] transition-opacity duration-[4000ms] ${isSection3Visible ? 'opacity-100' : 'opacity-0'}`}
+            className={`flex flex-col ml-[35px] transition-all duration-[1000ms] ${isSection3Visible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-[20px]'}`}
           >
             <p className="font-semibold text-[#ffffff] text-[20px] leading-[20px]">Play Your Way</p>
             <p className="text-[#ff6b4c] text-[15px] leading-[15px]">Have Fun, Feel More</p>
