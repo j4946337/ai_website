@@ -22,10 +22,12 @@ const Home6 = () => {
           setIsTitleVisible(true);
         } else if (entry.target === card1Ref.current && entry.isIntersecting) {
           setIsCard1Visible(true);
-        } else if (entry.target === card2Ref.current && entry.isIntersecting) {
-          setIsCard2Visible(true);
-        } else if (entry.target === card3Ref.current && entry.isIntersecting) {
-          setIsCard3Visible(true);
+          setTimeout(() => {
+            setIsCard2Visible(true);
+            setTimeout(() => {
+              setIsCard3Visible(true);
+            }, 300);
+          }, 300);
         }
       });
     }, { threshold: 0.3 });
@@ -48,17 +50,25 @@ const Home6 = () => {
       <img src={me_imf} alt="me_imf" className='w-full absolute bottom-0 left-0 z-0' />
       <div
         ref={titleRef}
-        className={`mx-auto w-[268px] px-0 text-center z-[100] relative transition-opacity duration-[4000ms] ${isTitleVisible ? 'opacity-100' : 'opacity-0'}`}
+        className={`mx-auto w-[268px] px-0 text-center z-[100] relative ${isTitleVisible ? '' : ''}`}
       >
-        <div className='text-[#ffffff] text-[34px] leading-[34px] font-semibold z-[100]'>YOUR TECH EDGE</div>
-        <div className='text-[#94a4f2] text-[17px] leading-[17px] font-light z-[100]'>Powering Your Emotional Future</div>
+        <div
+          className={`text-[#ffffff] text-[34px] leading-[34px] font-semibold z-[100] transition-all duration-[1200ms] ${isTitleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[30px]'}`}
+        >
+          YOUR TECH EDGE
+        </div>
+        <div
+          className={`text-[#94a4f2] text-[17px] leading-[17px] font-light z-[100] transition-opacity duration-[4000ms] ${isTitleVisible ? 'opacity-100' : 'opacity-0'}`}
+        >
+          Powering Your Emotional Future
+        </div>
       </div>
 
       {/* Desktop version */}
       <div className='flex mt-[53px] flex-col gap-[50px]'>
         <div
           ref={card1Ref}
-          className={`w-[260px] h-[95px] bg-[#7edaeb33] rounded-l-[30px] self-end relative transition-opacity duration-[4000ms] ${isCard1Visible ? 'opacity-100' : 'opacity-0'}`}
+          className={`w-[260px] h-[95px] bg-[#7edaeb33] rounded-l-[30px] self-end relative transition-all duration-[1000ms] ${isCard1Visible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[50px]'}`}
         >
           <img src={me_brain} alt="me_brain" className='absolute w-[90px] h-[100px] translate-x-[-40%] translate-y-[-15%]' />
           <div className=' w-[148px] mt-[13px] ml-[66px]'>
@@ -70,7 +80,7 @@ const Home6 = () => {
         </div>
         <div
           ref={card2Ref}
-          className={`w-[258px] h-[95px] bg-[#7edaeb33] rounded-r-[30px] mr-[17%] relative transition-opacity duration-[4000ms] ${isCard2Visible ? 'opacity-100' : 'opacity-0'}`}
+          className={`w-[258px] h-[95px] bg-[#7edaeb33] rounded-r-[30px] mr-[17%] relative transition-all duration-[1000ms] ${isCard2Visible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-[50px]'}`}
         >
           <img src={me_mobile} alt="me_mobile" className='absolute  w-[90px] h-[100px] right-0 bottom-[32px] translate-x-[40%]' />
           <div className='mr-[57px] w-[148px] mt-[25px] float-right'>
@@ -82,7 +92,7 @@ const Home6 = () => {
         </div>
         <div
           ref={card3Ref}
-          className={`w-[260px] h-[95px] bg-[#7edaeb33] rounded-l-[30px] self-end relative transition-opacity duration-[4000ms] ${isCard3Visible ? 'opacity-100' : 'opacity-0'}`}
+          className={`w-[260px] h-[95px] bg-[#7edaeb33] rounded-l-[30px] self-end relative transition-all duration-[1000ms] ${isCard3Visible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[50px]'}`}
         >
           <img src={me_cloud} alt="me_cloud" className='absolute w-[90px] h-[100px] translate-x-[-40%] translate-y-[-15%]' />
           <div className=' w-[114px] mt-[20px] ml-[66px]'>
