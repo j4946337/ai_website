@@ -22,10 +22,12 @@ const Home3 = () => {
           setIsTitleVisible(true);
         } else if (entry.target === card1Ref.current && entry.isIntersecting) {
           setIsCard1Visible(true);
-        } else if (entry.target === card2Ref.current && entry.isIntersecting) {
-          setIsCard2Visible(true);
-        } else if (entry.target === card3Ref.current && entry.isIntersecting) {
-          setIsCard3Visible(true);
+          setTimeout(() => {
+            setIsCard2Visible(true);
+            setTimeout(() => {
+              setIsCard3Visible(true);
+            }, 300);
+          }, 300);
         }
       });
     }, { threshold: 0.3 });
@@ -46,17 +48,22 @@ const Home3 = () => {
   return (
     <div className="h-[616px] w-full bg-[#0b0f20] pt-[53px] mt-[-1px]">
       <div className="flex flex-col items-center">
-        <div
-          ref={titleRef}
-          className={`transition-opacity duration-[4000ms] ${isTitleVisible ? 'opacity-100' : 'opacity-0'}`}
-        >
-          <p className="text-[#ffffff] w-[250px] text-[34px] leading-[30px] font-semibold text-center">THE CHAINS OF CURRENT AI</p>
-          <p className="text-[#94a4f2] text-[17px] font-light">Why AI Lets You Down</p>
+        <div ref={titleRef}>
+          <p
+            className={`text-[#ffffff] w-[250px] text-[34px] leading-[30px] font-semibold text-center transition-all duration-[1200ms] ${isTitleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[30px]'}`}
+          >
+            THE CHAINS OF CURRENT AI
+          </p>
+          <p
+            className={`text-[#94a4f2] text-center text-[17px] font-light transition-opacity duration-[4000ms] ${isTitleVisible ? 'opacity-100' : 'opacity-0'}`}
+          >
+            Why AI Lets You Down
+          </p>
         </div>
         <div className="flex flex-col mt-[55px] gap-[32px] justify-center items-center">
           <div
             ref={card1Ref}
-            className={`w-[251px] h-[103px] bg-[#1f2131] rounded-[25px] relative transition-opacity duration-[4000ms] ${isCard1Visible ? 'opacity-100' : 'opacity-0'}`}
+            className={`w-[251px] h-[103px] bg-[#1f2131] rounded-[25px] relative transition-all duration-[800ms] ${isCard1Visible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-[100px]'}`}
           >
             <img src={ICON_BG} className="absolute w-[110px] h-[58px] " />
             <img src={ICON_1} className="absolute w-[27px] h-[27px] left-[33px] translate-y-[-50%]" alt="" />
@@ -67,7 +74,7 @@ const Home3 = () => {
           </div>
           <div
             ref={card2Ref}
-            className={`w-[251px] h-[103px] bg-[#1f2131] rounded-[25px] relative transition-opacity duration-[4000ms] ${isCard2Visible ? 'opacity-100' : 'opacity-0'}`}
+            className={`w-[251px] h-[103px] bg-[#1f2131] rounded-[25px] relative transition-all duration-[800ms] ${isCard2Visible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-[100px]'}`}
           >
             <img src={ICON_BG} className="absolute w-[110px] h-[58px] " />
             <img src={ICON_2} className="absolute w-[27px] h-[27px] left-[33px] translate-y-[-50%]" alt="" />
@@ -78,7 +85,7 @@ const Home3 = () => {
           </div>
           <div
             ref={card3Ref}
-            className={`w-[251px] h-[103px] bg-[#1f2131] rounded-[25px] relative transition-opacity duration-[4000ms] ${isCard3Visible ? 'opacity-100' : 'opacity-0'}`}
+            className={`w-[251px] h-[103px] bg-[#1f2131] rounded-[25px] relative transition-all duration-[800ms] ${isCard3Visible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-[100px]'}`}
           >
             <img src={ICON_BG} className="absolute w-[110px] h-[58px] " />
             <img src={ICON_3} className="absolute w-[27px] h-[27px] left-[33px] translate-y-[-50%]" alt="" />
