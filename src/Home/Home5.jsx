@@ -66,10 +66,18 @@ const Home5 = () => {
     <div className="w-full h-auto min-h-[700px] overflow-hidden bg-[#0a1650] mt-[-1px]">
       <div
         ref={titleRef}
-        className={`flex justify-between flex-col items-center transition-opacity duration-[4000ms] ${isTitleVisible ? 'opacity-100' : 'opacity-0'}`}
+        className={`flex justify-between flex-col items-center ${isTitleVisible ? '' : ''}`}
       >
-        <p className="z-0 text-[#ffffff] text-[34px] leading-[34px] font-semibold text-center">YOUR JOURNEY, STEP-BY-STEP</p>
-        <p className="text-[#94a4f2] font-light text-[17px] leading-[17px]  text-center">How You Earn Your ME Tokens?</p>
+        <p
+          className={`z-0 text-[#ffffff] text-[34px] leading-[34px] font-semibold text-center transition-all duration-[1200ms] ${isTitleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[30px]'}`}
+        >
+          YOUR JOURNEY, STEP-BY-STEP
+        </p>
+        <p
+          className={`text-[#94a4f2] font-light text-[17px] leading-[17px] text-center transition-opacity duration-[4000ms] ${isTitleVisible ? 'opacity-100' : 'opacity-0'}`}
+        >
+          How You Earn Your ME Tokens?
+        </p>
       </div>
 
       {/* Desktop version with wires and absolute positioning */}
