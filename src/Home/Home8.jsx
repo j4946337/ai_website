@@ -1,19 +1,69 @@
-
 import point from '../assets/images/Ai_E_8.png'
 import rp_1 from '../assets/images/Ai_E_4.png'
 import rp_2 from '../assets/images/Ai_E_5.png'
 import rp_3 from '../assets/images/Ai_E_6.png'
 import rp_4 from '../assets/images/Ai_E_7.png'
+import { useEffect, useState, useRef } from 'react';
 
 const Home8 = () => {
+  const [isTitleVisible, setIsTitleVisible] = useState(false);
+  const [isPhase1Visible, setIsPhase1Visible] = useState(false);
+  const [isPhase2Visible, setIsPhase2Visible] = useState(false);
+  const [isPhase3Visible, setIsPhase3Visible] = useState(false);
+  const [isPhase4Visible, setIsPhase4Visible] = useState(false);
+
+  const titleRef = useRef(null);
+  const phase1Ref = useRef(null);
+  const phase2Ref = useRef(null);
+  const phase3Ref = useRef(null);
+  const phase4Ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.target === titleRef.current && entry.isIntersecting) {
+          setIsTitleVisible(true);
+        } else if (entry.target === phase1Ref.current && entry.isIntersecting) {
+          setIsPhase1Visible(true);
+        } else if (entry.target === phase2Ref.current && entry.isIntersecting) {
+          setIsPhase2Visible(true);
+        } else if (entry.target === phase3Ref.current && entry.isIntersecting) {
+          setIsPhase3Visible(true);
+        } else if (entry.target === phase4Ref.current && entry.isIntersecting) {
+          setIsPhase4Visible(true);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    if (titleRef.current) observer.observe(titleRef.current);
+    if (phase1Ref.current) observer.observe(phase1Ref.current);
+    if (phase2Ref.current) observer.observe(phase2Ref.current);
+    if (phase3Ref.current) observer.observe(phase3Ref.current);
+    if (phase4Ref.current) observer.observe(phase4Ref.current);
+
+    return () => {
+      if (titleRef.current) observer.unobserve(titleRef.current);
+      if (phase1Ref.current) observer.unobserve(phase1Ref.current);
+      if (phase2Ref.current) observer.unobserve(phase2Ref.current);
+      if (phase3Ref.current) observer.unobserve(phase3Ref.current);
+      if (phase4Ref.current) observer.unobserve(phase4Ref.current);
+    };
+  }, []);
+
   return (
     <div className="home_8 h-[700px] bg-[#0b0f20] w-full pt-[37px] mt-[-1px]">
-      <div className="flex flex-col items-center">
+      <div
+        ref={titleRef}
+        className={`flex flex-col items-center transition-opacity duration-[4000ms] ${isTitleVisible ? 'opacity-100' : 'opacity-0'}`}
+      >
         <div className="text-[#ffffff] text-[34px] leading-[34px] font-semibold text-left">ROADMAP</div>
         <div className="text-[#94a4f2] text-[15px] leading-[15px] font-light text-left">From Your First Chat to Global Impact</div>
       </div>
       <div className='mt-[38px] flex flex-col ml-[54px] gap-[30px] '>
-        <div className='flex gap-[13px] relative'>
+        <div
+          ref={phase1Ref}
+          className={`flex gap-[13px] relative transition-opacity duration-[4000ms] ${isPhase1Visible ? 'opacity-100' : 'opacity-0'}`}
+        >
           <div className='flex flex-col absolute items-center top-[14px] left-[11px]  '>
             <span className='text-[#fff] text-[12px] leading-[12px] font-semibold'>Phase</span>
             <span className='text-[#fff] text-[25px] leading-[25px] font-semibold'>1</span>
@@ -23,10 +73,13 @@ const Home8 = () => {
           <div className='flex flex-col'>
             <p className='text-[#fff] text-[12px] leading-[12px] font-semibold'>Q2 2025</p>
             <p className='text-[#fff] text-[12px] leading-[12px] font-semibold'>H5 Beta</p>
-            <p className='text-[#cdcdcd] text-[11px] leading-[11px] font-light mt-[8px] w-[154px]'>Your H5 prototype launches—customize your AI, earn ME tokens, and shape our companion with your community’s input.</p>
+            <p className='text-[#cdcdcd] text-[11px] leading-[11px] font-light mt-[8px] w-[154px]'>Your H5 prototype launches—customize your AI, earn ME tokens, and shape our companion with your community's input.</p>
           </div>
         </div>
-        <div className='flex gap-[13px] relative'>
+        <div
+          ref={phase2Ref}
+          className={`flex gap-[13px] relative transition-opacity duration-[4000ms] ${isPhase2Visible ? 'opacity-100' : 'opacity-0'}`}
+        >
           <div className='flex flex-col absolute items-center top-[14px] left-[11px]  '>
             <span className='text-[#fff] text-[12px] leading-[12px] font-semibold'>Phase</span>
             <span className='text-[#fff] text-[25px] leading-[25px] font-semibold'>2</span>
@@ -39,7 +92,10 @@ const Home8 = () => {
             <p className='text-[#cdcdcd] text-[11px] leading-[11px] font-light mt-[8px] w-[156px]'>Your chats power an on-chain LLM, NFTs launch, and an app connects you—your community builds a bias-free ally.</p>
           </div>
         </div>
-        <div className='flex gap-[13px] relative'>
+        <div
+          ref={phase3Ref}
+          className={`flex gap-[13px] relative transition-opacity duration-[4000ms] ${isPhase3Visible ? 'opacity-100' : 'opacity-0'}`}
+        >
           <div className='flex flex-col absolute items-center top-[14px] left-[11px]  '>
             <span className='text-[#fff] text-[12px] leading-[12px] font-semibold'>Phase</span>
             <span className='text-[#fff] text-[25px] leading-[25px] font-semibold'>3</span>
@@ -52,7 +108,10 @@ const Home8 = () => {
             <p className='text-[#cdcdcd] text-[11px] leading-[11px] font-light mt-[8px] w-[156px]'>Your Virtual City opens—AR, metaverse, and celebrity voices join, crafted with your community, boosting your bond.</p>
           </div>
         </div>
-        <div className='flex gap-[13px] relative'>
+        <div
+          ref={phase4Ref}
+          className={`flex gap-[13px] relative transition-opacity duration-[4000ms] ${isPhase4Visible ? 'opacity-100' : 'opacity-0'}`}
+        >
           <div className='flex flex-col absolute items-center top-[14px] left-[11px]  '>
             <span className='text-[#fff] text-[12px] leading-[12px] font-semibold'>Phase</span>
             <span className='text-[#fff] text-[25px] leading-[25px] font-semibold'>4</span>
@@ -66,7 +125,6 @@ const Home8 = () => {
           </div>
         </div>
       </div>
-
     </div>
   )
 }
