@@ -8,6 +8,13 @@ const Home2 = () => {
   const [isTitleVisible, setIsTitleVisible] = useState(false);
   const [isIconsVisible, setIsIconsVisible] = useState(false);
   const [isDescriptionVisible, setIsDescriptionVisible] = useState(false);
+  const [titleLine1Visible, setTitleLine1Visible] = useState(false);
+  const [titleLine2Visible, setTitleLine2Visible] = useState(false);
+  const [iconsVisibility, setIconsVisibility] = useState({
+    icon1: false,
+    icon2: false,
+    icon3: false
+  });
 
   const titleRef = useRef(null);
   const iconsRef = useRef(null);
@@ -37,33 +44,92 @@ const Home2 = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (isTitleVisible) {
+      setTimeout(() => {
+        setTitleLine1Visible(true);
+
+        setTimeout(() => {
+          setTitleLine2Visible(true);
+        }, 300);
+      }, 100);
+    }
+  }, [isTitleVisible]);
+
+  useEffect(() => {
+    if (isIconsVisible) {
+      setTimeout(() => {
+        setIconsVisibility(prev => ({ ...prev, icon1: true }));
+
+        setTimeout(() => {
+          setIconsVisibility(prev => ({ ...prev, icon2: true }));
+
+          setTimeout(() => {
+            setIconsVisibility(prev => ({ ...prev, icon3: true }));
+          }, 300);
+        }, 300);
+      }, 200);
+    }
+  }, [isIconsVisible]);
+
   return (
     <div className='home_2 w-full bg-[#0a1650] h-[415px]  relative mt-[-1px]'>
       <img src={home_2} alt="" className='absolute  top-0  left-[-60%] h-[415px] w-[200%] max-w-none' />
       <div className='absolute  mt-[33px] font-semibold text-[34px] leading-[30px]  ml-[33px]  w-[156px] '>
-        <p
+        <div
           ref={titleRef}
           className={`flex flex-col transition-opacity duration-[4000ms] ${isTitleVisible ? 'opacity-100' : 'opacity-0'}`}
         >
-          <span className='text-[#ff6b4c]'>ME AI</span>
-          <span className='text-[#ffffff]'>UNVEILED</span>
-        </p>
+          <div className="overflow-hidden h-[35px]">
+            <span
+              className={`text-[#ff6b4c] block transition-all duration-700 transform
+                ${titleLine1Visible ? 'translate-y-0 opacity-100' : 'translate-y-[20px] opacity-0'}`}
+            >
+              ME AI
+            </span>
+          </div>
+          <div className="overflow-hidden h-[35px]">
+            <span
+              className={`text-[#ffffff] block transition-all duration-700 transform
+                ${titleLine2Visible ? 'translate-y-0 opacity-100' : 'translate-y-[20px] opacity-0'}`}
+            >
+              UNVEILED
+            </span>
+          </div>
+        </div>
         {/* mobile */}
         <div
           ref={iconsRef}
           className={`flex flex-col w-full justify-center items-start gap-[13px] mt-[31px] transition-opacity duration-[4000ms] ${isIconsVisible ? 'opacity-100' : 'opacity-0'}`}
         >
-          <div className='flex  items-center gap-[9px]'>
-            <img src={Ai_B_2} alt="" className='w-[37px] h-[37px]' />
-            <p className='text-[12px] text-[#cfd5f6]'>COMPANION</p>
+          <div className='overflow-hidden'>
+            <div
+              className={`flex items-center gap-[9px] transition-all duration-700 transform
+                ${iconsVisibility.icon1 ? 'translate-y-0 opacity-100' : 'translate-y-[20px] opacity-0'}`}
+            >
+              <img src={Ai_B_2} alt="" className='w-[37px] h-[37px]' />
+              <p className='text-[12px] text-[#cfd5f6]'>COMPANION</p>
+            </div>
           </div>
-          <div className='flex  items-center gap-[9px]'>
-            <img src={Ai_B_3} alt="" className='w-[37px] h-[37px]' />
-            <p className='text-[12px] text-[#cfd5f6] text-center'>RULES</p>
+
+          <div className='overflow-hidden'>
+            <div
+              className={`flex items-center gap-[9px] transition-all duration-700 transform
+                ${iconsVisibility.icon2 ? 'translate-y-0 opacity-100' : 'translate-y-[20px] opacity-0'}`}
+            >
+              <img src={Ai_B_3} alt="" className='w-[37px] h-[37px]' />
+              <p className='text-[12px] text-[#cfd5f6] text-center'>RULES</p>
+            </div>
           </div>
-          <div className='flex  items-center gap-[9px]'>
-            <img src={Ai_B_4} alt="" className='w-[37px] h-[37px]' />
-            <p className='text-[12px] text-[#cfd5f6]'>REWARDS</p>
+
+          <div className='overflow-hidden'>
+            <div
+              className={`flex items-center gap-[9px] transition-all duration-700 transform
+                ${iconsVisibility.icon3 ? 'translate-y-0 opacity-100' : 'translate-y-[20px] opacity-0'}`}
+            >
+              <img src={Ai_B_4} alt="" className='w-[37px] h-[37px]' />
+              <p className='text-[12px] text-[#cfd5f6]'>REWARDS</p>
+            </div>
           </div>
         </div>
         <div
