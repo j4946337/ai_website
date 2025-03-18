@@ -31,35 +31,33 @@ const Home5 = () => {
       entries.forEach(entry => {
         if (entry.target === titleRef.current && entry.isIntersecting) {
           setIsTitleVisible(true);
-
-          // 标题出现后，延迟显示每个步骤
+        } else if (entry.target === step1Ref.current && entry.isIntersecting) {
           setTimeout(() => {
             setIsStep1Visible(true);
-
             setTimeout(() => {
               setIsStep2Visible(true);
-
               setTimeout(() => {
                 setIsStep3Visible(true);
-
                 setTimeout(() => {
                   setIsStep4Visible(true);
-
                   setTimeout(() => {
                     setIsStep5Visible(true);
                   }, 300);
                 }, 300);
               }, 300);
             }, 300);
-          }, 500);
+          }, 300);
         }
       });
     }, { threshold: 0.3 });
 
     if (titleRef.current) observer.observe(titleRef.current);
+    if (step1Ref.current) observer.observe(step1Ref.current);
 
     return () => {
       if (titleRef.current) observer.unobserve(titleRef.current);
+      if (step1Ref.current) observer.unobserve(step1Ref.current);
+      // 其他步骤不需要在observer中监听，因为将通过级联计时器触发
     };
   }, []);
 
@@ -87,13 +85,13 @@ const Home5 = () => {
         {/* step_1 */}
         <div
           ref={step1Ref}
-          className={`5_step_1 absolute flex items-center w-[225px] h-[79px] gap-[2px] ${isStep1Visible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-[1000ms]`}
+          className={`5_step_1 absolute flex items-center w-[225px] h-[79px] gap-[2px] transition-opacity duration-[4000ms] ${isStep1Visible ? 'opacity-100' : 'opacity-0'}`}
         >
           <div className="w-[132px] h-[132px] relative">
             <img src={step_bg} alt="step_bg" className=" max-w-none w-[120px] h-[120px] " />
             <img src={step_1} alt="step_1" className="w-[65px] h-[65px] max-w-none absolute top-[27px] left-[27px] " />
           </div>
-          <div className={`flex flex-col grow ml-[-10px] gap-[4px] transition-all duration-[800ms] ${isStep1Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[20px]'}`}>
+          <div className={`flex flex-col grow ml-[-10px] gap-[4px] transition-all duration-1000 ${isStep1Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[20px]'}`} style={{ transitionDelay: '300ms' }}>
             <div className="flex h-[20px] items-center gap-[5px]">
               <div className="w-[20px] h-[20px] bg-[#ff6b4c] rounded-full leading-[18px] text-center text-[#ffffff] text-[13px] font-bold">1</div>
               <span className="text-[#ffffff] w-[112px] text-[13px] leading-[13px] font-semibold text-nowrap">Unlock Your World</span>
@@ -105,13 +103,13 @@ const Home5 = () => {
         {/* step_2 */}
         <div
           ref={step2Ref}
-          className={`5_step_2 absolute top-[110px] flex items-center w-[225px] h-[79px] gap-[2px] ${isStep2Visible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-[1000ms]`}
+          className={`5_step_2 absolute top-[110px] flex items-center w-[225px] h-[79px] gap-[2px] transition-opacity duration-[4000ms] ${isStep2Visible ? 'opacity-100' : 'opacity-0'}`}
         >
           <div className="w-[132px] h-[132px] relative">
             <img src={step_bg} alt="step_bg" className=" max-w-none w-[120px] h-[120px] " />
             <img src={step_2} alt="step_1" className="w-[65px] h-[95px] max-w-none absolute top-[2px] left-[27px] " />
           </div>
-          <div className={`flex flex-col grow ml-[-10px] gap-[4px] transition-all duration-[800ms] ${isStep2Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[20px]'}`}>
+          <div className={`flex flex-col grow ml-[-10px] gap-[4px] transition-all duration-1000 ${isStep2Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[20px]'}`} style={{ transitionDelay: '300ms' }}>
             <div className="flex h-[20px] items-center gap-[5px]">
               <div className="w-[20px] h-[20px] bg-[#ff6b4c] rounded-full leading-[18px] text-center text-[#ffffff] text-[13px] font-bold">2</div>
               <span className="text-[#ffffff] w-[112px] text-[13px] leading-[13px] font-semibold text-nowrap">Discover Your Ally</span>
@@ -120,16 +118,16 @@ const Home5 = () => {
           </div>
         </div>
 
-        {/* step_3 */}
+        {/* Other steps... */}
         <div
           ref={step3Ref}
-          className={`5_step_3 absolute top-[210px] flex items-center w-[225px] h-[79px] gap-[2px] ${isStep3Visible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-[1000ms]`}
+          className={`5_step_3 absolute top-[210px] flex items-center w-[225px] h-[79px] gap-[2px] transition-opacity duration-[4000ms] ${isStep3Visible ? 'opacity-100' : 'opacity-0'}`}
         >
           <div className="w-[132px] h-[132px] relative">
             <img src={step_bg} alt="step_bg" className=" max-w-none w-[120px] h-[120px] " />
             <img src={step_3} alt="step_3" className="w-[65px] h-[65px] max-w-none absolute top-[27px] left-[27px] " />
           </div>
-          <div className={`flex flex-col grow ml-[-10px] gap-[4px] transition-all duration-[800ms] ${isStep3Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[20px]'}`}>
+          <div className={`flex flex-col grow ml-[-10px] gap-[4px] transition-all duration-1000 ${isStep3Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[20px]'}`} style={{ transitionDelay: '300ms' }}>
             <div className="flex h-[20px] items-center gap-[5px]">
               <div className="w-[20px] h-[20px] bg-[#ff6b4c] rounded-full leading-[18px] text-center text-[#ffffff] text-[13px] font-bold">3</div>
               <span className="text-[#ffffff] w-[112px] text-[13px] leading-[13px] font-semibold text-nowrap">Chat & Shine</span>
@@ -140,13 +138,13 @@ const Home5 = () => {
 
         <div
           ref={step4Ref}
-          className={`5_step_4 absolute top-[310px] flex items-center w-[225px] h-[79px] gap-[2px] ${isStep4Visible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-[1000ms]`}
+          className={`5_step_4 absolute top-[310px] flex items-center w-[225px] h-[79px] gap-[2px] transition-opacity duration-[4000ms] ${isStep4Visible ? 'opacity-100' : 'opacity-0'}`}
         >
           <div className="w-[132px] h-[132px] relative">
             <img src={step_bg} alt="step_bg" className=" max-w-none w-[120px] h-[120px] " />
             <img src={step_4} alt="step_4" className="w-[75px] h-[65px] max-w-none absolute top-[27px] left-[27px] " />
           </div>
-          <div className={`flex flex-col grow ml-[-10px] gap-[4px] transition-all duration-[800ms] ${isStep4Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[20px]'}`}>
+          <div className={`flex flex-col grow ml-[-10px] gap-[4px] transition-all duration-1000 ${isStep4Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[20px]'}`} style={{ transitionDelay: '300ms' }}>
             <div className="flex h-[20px] items-center gap-[5px]">
               <div className="w-[20px] h-[20px] bg-[#ff6b4c] rounded-full leading-[18px] text-center text-[#ffffff] text-[13px] font-bold">4</div>
               <span className="text-[#ffffff] w-[112px] text-[13px] leading-[13px] font-semibold text-nowrap"> Seal It On-Chain</span>
@@ -157,13 +155,13 @@ const Home5 = () => {
 
         <div
           ref={step5Ref}
-          className={`5_step_5 absolute top-[410px] flex items-center w-[225px] h-[79px] gap-[2px] ${isStep5Visible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-[1000ms]`}
+          className={`5_step_5 absolute top-[410px] flex items-center w-[225px] h-[79px] gap-[2px] transition-opacity duration-[4000ms] ${isStep5Visible ? 'opacity-100' : 'opacity-0'}`}
         >
           <div className="w-[132px] h-[132px] relative">
             <img src={step_bg} alt="step_bg" className=" max-w-none w-[120px] h-[120px] " />
             <img src={step_5} alt="step_4" className="w-[85px] h-[95px] max-w-none absolute top-[6px] left-[20px] " />
           </div>
-          <div className={`flex flex-col grow ml-[-10px] gap-[4px] transition-all duration-[800ms] ${isStep5Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[20px]'}`}>
+          <div className={`flex flex-col grow ml-[-10px] gap-[4px] transition-all duration-1000 ${isStep5Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[20px]'}`} style={{ transitionDelay: '300ms' }}>
             <div className="flex h-[20px] items-center gap-[5px]">
               <div className="w-[20px] h-[20px] bg-[#ff6b4c] rounded-full leading-[18px] text-center text-[#ffffff] text-[13px] font-bold">5</div>
               <span className="text-[#ffffff] w-[112px] text-[13px] leading-[13px] font-semibold text-nowrap">Claim Your ME Tokens</span>
