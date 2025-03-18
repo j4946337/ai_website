@@ -84,12 +84,28 @@ const Home5_1 = () => {
       <div className='flex flex-col gap-[15%] '>
         <div
           ref={titleRef}
-          className={`w-full flex flex-col transition-opacity duration-[4000ms] ${isTitleVisible ? 'opacity-100' : 'opacity-0'}`}
+          className={`w-full flex flex-col ${isTitleVisible ? '' : ''}`}
         >
-          <div className='text-[#fff] text-[34px] leading-[34px] font-semibold text-center'>CHAT WITH</div>
-          <div className='text-[#fff] text-[34px] leading-[34px] font-semibold text-center'>YOUR AI</div>
-          <div className='text-[#fff] text-[34px] leading-[34px] font-thin text-center'>ANYTIME</div>
-          <div className='text-[#fff] text-[34px] leading-[34px] font-thin text-center'>ANYWHERE</div>
+          <div
+            className={`text-[#fff] text-[34px] leading-[34px] font-semibold text-center transition-all duration-[1200ms] ${isTitleVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-[50px]'}`}
+          >
+            CHAT WITH
+          </div>
+          <div
+            className={`text-[#fff] text-[34px] leading-[34px] font-semibold text-center transition-all duration-[1200ms] ${isTitleVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[50px]'}`}
+          >
+            YOUR AI
+          </div>
+          <div
+            className={`text-[#fff] text-[34px] leading-[34px] font-thin text-center transition-opacity duration-[4000ms] ${isTitleVisible ? 'opacity-100' : 'opacity-0'}`}
+          >
+            ANYTIME
+          </div>
+          <div
+            className={`text-[#fff] text-[34px] leading-[34px] font-thin text-center transition-opacity duration-[4000ms] ${isTitleVisible ? 'opacity-100' : 'opacity-0'}`}
+          >
+            ANYWHERE
+          </div>
         </div>
 
         <div
