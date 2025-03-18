@@ -25,12 +25,15 @@ const Home8 = () => {
           setIsTitleVisible(true);
         } else if (entry.target === phase1Ref.current && entry.isIntersecting) {
           setIsPhase1Visible(true);
-        } else if (entry.target === phase2Ref.current && entry.isIntersecting) {
-          setIsPhase2Visible(true);
-        } else if (entry.target === phase3Ref.current && entry.isIntersecting) {
-          setIsPhase3Visible(true);
-        } else if (entry.target === phase4Ref.current && entry.isIntersecting) {
-          setIsPhase4Visible(true);
+          setTimeout(() => {
+            setIsPhase2Visible(true);
+            setTimeout(() => {
+              setIsPhase3Visible(true);
+              setTimeout(() => {
+                setIsPhase4Visible(true);
+              }, 300);
+            }, 300);
+          }, 300);
         }
       });
     }, { threshold: 0.3 });
@@ -54,23 +57,53 @@ const Home8 = () => {
     <div className="home_8 h-[700px] bg-[#0b0f20] w-full pt-[37px] mt-[-1px]">
       <div
         ref={titleRef}
-        className={`flex flex-col items-center transition-opacity duration-[4000ms] ${isTitleVisible ? 'opacity-100' : 'opacity-0'}`}
+        className={`flex flex-col items-center ${isTitleVisible ? '' : ''}`}
       >
-        <div className="text-[#ffffff] text-[34px] leading-[34px] font-semibold text-left">ROADMAP</div>
-        <div className="text-[#94a4f2] text-[15px] leading-[15px] font-light text-left">From Your First Chat to Global Impact</div>
+        <div
+          className={`text-[#ffffff] text-[34px] leading-[34px] font-semibold text-left transition-all duration-[1200ms] ${isTitleVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[50px]'}`}
+        >
+          ROADMAP
+        </div>
+        <div
+          className={`text-[#94a4f2] text-[15px] leading-[15px] font-light text-left transition-opacity duration-[4000ms] ${isTitleVisible ? 'opacity-100' : 'opacity-0'}`}
+        >
+          From Your First Chat to Global Impact
+        </div>
       </div>
       <div className='mt-[38px] flex flex-col ml-[54px] gap-[30px] '>
         <div
           ref={phase1Ref}
-          className={`flex gap-[13px] relative transition-opacity duration-[4000ms] ${isPhase1Visible ? 'opacity-100' : 'opacity-0'}`}
+          className={`flex gap-[13px] relative ${isPhase1Visible ? '' : ''}`}
         >
-          <div className='flex flex-col absolute items-center top-[14px] left-[11px]  '>
+          <div
+            className={`flex flex-col absolute items-center top-[14px] left-[11px] z-10 transition-all duration-[1200ms] ${isPhase1Visible
+              ? "opacity-100 scale-100 translate-x-0"
+              : "opacity-0 scale-50 -translate-x-[20px]"
+              }`}
+          >
             <span className='text-[#fff] text-[12px] leading-[12px] font-semibold'>Phase</span>
             <span className='text-[#fff] text-[25px] leading-[25px] font-semibold'>1</span>
           </div>
-          <img src={rp_1} alt="" className='w-[54px] h-[103px]' />
-          <img src={point} alt="" className=' absolute bottom-[-10px] w-[15px] left-[20px] translate-x-[-4%] h-[15px]' />
-          <div className='flex flex-col'>
+          <div className='w-[54px] h-[103px] relative overflow-hidden'>
+            <img
+              src={rp_1}
+              alt=""
+              className={`w-[54px] h-[103px] absolute transition-all duration-[1200ms] ${isPhase1Visible
+                ? 'opacity-100 scale-100 translate-x-0'
+                : 'opacity-0 scale-50 -translate-x-[30px]'
+                }`}
+            />
+          </div>
+          <img
+            src={point}
+            alt=""
+            className={`absolute bottom-[-10px] w-[15px] left-[20px] translate-x-[-4%] h-[15px] transition-all duration-[1200ms] ${isPhase1Visible
+              ? "opacity-100 scale-100 translate-x-0"
+              : "opacity-0 scale-50 -translate-x-[30px]"
+              }`}
+            style={{ transitionDelay: '100ms' }}
+          />
+          <div className={`flex flex-col transition-opacity duration-[1000ms] ${isPhase1Visible ? "opacity-100" : "opacity-0"}`}>
             <p className='text-[#fff] text-[12px] leading-[12px] font-semibold'>Q2 2025</p>
             <p className='text-[#fff] text-[12px] leading-[12px] font-semibold'>H5 Beta</p>
             <p className='text-[#cdcdcd] text-[11px] leading-[11px] font-light mt-[8px] w-[154px]'>Your H5 prototype launches—customize your AI, earn ME tokens, and shape our companion with your community's input.</p>
@@ -78,15 +111,37 @@ const Home8 = () => {
         </div>
         <div
           ref={phase2Ref}
-          className={`flex gap-[13px] relative transition-opacity duration-[4000ms] ${isPhase2Visible ? 'opacity-100' : 'opacity-0'}`}
+          className={`flex gap-[13px] relative ${isPhase2Visible ? '' : ''}`}
         >
-          <div className='flex flex-col absolute items-center top-[14px] left-[11px]  '>
+          <div
+            className={`flex flex-col absolute items-center top-[14px] left-[11px] z-10 transition-all duration-[1200ms] ${isPhase2Visible
+              ? "opacity-100 scale-100 translate-x-0"
+              : "opacity-0 scale-50 -translate-x-[20px]"
+              }`}
+          >
             <span className='text-[#fff] text-[12px] leading-[12px] font-semibold'>Phase</span>
             <span className='text-[#fff] text-[25px] leading-[25px] font-semibold'>2</span>
           </div>
-          <img src={rp_2} alt="" className='w-[54px] h-[103px]' />
-          <img src={point} alt="" className=' absolute bottom-[-10px] w-[15px] left-[20px] translate-x-[-4%] h-[15px]' />
-          <div className='flex flex-col'>
+          <div className='w-[54px] h-[103px] relative overflow-hidden'>
+            <img
+              src={rp_2}
+              alt=""
+              className={`w-[54px] h-[103px] absolute transition-all duration-[1200ms] ${isPhase2Visible
+                ? 'opacity-100 scale-100 translate-x-0'
+                : 'opacity-0 scale-50 -translate-x-[30px]'
+                }`}
+            />
+          </div>
+          <img
+            src={point}
+            alt=""
+            className={`absolute bottom-[-10px] w-[15px] left-[20px] translate-x-[-4%] h-[15px] transition-all duration-[1200ms] ${isPhase2Visible
+              ? "opacity-100 scale-100 translate-x-0"
+              : "opacity-0 scale-50 -translate-x-[30px]"
+              }`}
+            style={{ transitionDelay: '100ms' }}
+          />
+          <div className={`flex flex-col transition-opacity duration-[1000ms] ${isPhase2Visible ? "opacity-100" : "opacity-0"}`}>
             <p className='text-[#fff] text-[12px] leading-[12px] font-semibold'>Q3 2025</p>
             <p className='text-[#fff] text-[12px] leading-[12px] font-semibold'>On-Chain & App</p>
             <p className='text-[#cdcdcd] text-[11px] leading-[11px] font-light mt-[8px] w-[156px]'>Your chats power an on-chain LLM, NFTs launch, and an app connects you—your community builds a bias-free ally.</p>
@@ -94,15 +149,37 @@ const Home8 = () => {
         </div>
         <div
           ref={phase3Ref}
-          className={`flex gap-[13px] relative transition-opacity duration-[4000ms] ${isPhase3Visible ? 'opacity-100' : 'opacity-0'}`}
+          className={`flex gap-[13px] relative ${isPhase3Visible ? '' : ''}`}
         >
-          <div className='flex flex-col absolute items-center top-[14px] left-[11px]  '>
+          <div
+            className={`flex flex-col absolute items-center top-[14px] left-[11px] z-10 transition-all duration-[1200ms] ${isPhase3Visible
+              ? "opacity-100 scale-100 translate-x-0"
+              : "opacity-0 scale-50 -translate-x-[20px]"
+              }`}
+          >
             <span className='text-[#fff] text-[12px] leading-[12px] font-semibold'>Phase</span>
             <span className='text-[#fff] text-[25px] leading-[25px] font-semibold'>3</span>
           </div>
-          <img src={rp_3} alt="" className='w-[54px] h-[103px]' />
-          <img src={point} alt="" className=' absolute bottom-[-10px] w-[15px] left-[20px] translate-x-[-4%] h-[15px]' />
-          <div className='flex flex-col'>
+          <div className='w-[54px] h-[103px] relative overflow-hidden'>
+            <img
+              src={rp_3}
+              alt=""
+              className={`w-[54px] h-[103px] absolute transition-all duration-[1200ms] ${isPhase3Visible
+                ? 'opacity-100 scale-100 translate-x-0'
+                : 'opacity-0 scale-50 -translate-x-[30px]'
+                }`}
+            />
+          </div>
+          <img
+            src={point}
+            alt=""
+            className={`absolute bottom-[-10px] w-[15px] left-[20px] translate-x-[-4%] h-[15px] transition-all duration-[1200ms] ${isPhase3Visible
+              ? "opacity-100 scale-100 translate-x-0"
+              : "opacity-0 scale-50 -translate-x-[30px]"
+              }`}
+            style={{ transitionDelay: '100ms' }}
+          />
+          <div className={`flex flex-col transition-opacity duration-[1000ms] ${isPhase3Visible ? "opacity-100" : "opacity-0"}`}>
             <p className='text-[#fff] text-[12px] leading-[12px] font-semibold'>Q2 2026</p>
             <p className='text-[#fff] text-[12px] leading-[12px] font-semibold'>Metaverse & Celeb Voices</p>
             <p className='text-[#cdcdcd] text-[11px] leading-[11px] font-light mt-[8px] w-[156px]'>Your Virtual City opens—AR, metaverse, and celebrity voices join, crafted with your community, boosting your bond.</p>
@@ -110,15 +187,37 @@ const Home8 = () => {
         </div>
         <div
           ref={phase4Ref}
-          className={`flex gap-[13px] relative transition-opacity duration-[4000ms] ${isPhase4Visible ? 'opacity-100' : 'opacity-0'}`}
+          className={`flex gap-[13px] relative ${isPhase4Visible ? '' : ''}`}
         >
-          <div className='flex flex-col absolute items-center top-[14px] left-[11px]  '>
+          <div
+            className={`flex flex-col absolute items-center top-[14px] left-[11px] z-10 transition-all duration-[1200ms] ${isPhase4Visible
+              ? "opacity-100 scale-100 translate-x-0"
+              : "opacity-0 scale-50 -translate-x-[20px]"
+              }`}
+          >
             <span className='text-[#fff] text-[12px] leading-[12px] font-semibold'>Phase</span>
             <span className='text-[#fff] text-[25px] leading-[25px] font-semibold'>4</span>
           </div>
-          <img src={rp_4} alt="" className='w-[54px] h-[103px]' />
-          <img src={point} alt="" className=' absolute bottom-[-10px] w-[15px] left-[20px] translate-x-[-4%] h-[15px]' />
-          <div className='flex flex-col'>
+          <div className='w-[54px] h-[103px] relative overflow-hidden'>
+            <img
+              src={rp_4}
+              alt=""
+              className={`w-[54px] h-[103px] absolute transition-all duration-[1200ms] ${isPhase4Visible
+                ? 'opacity-100 scale-100 translate-x-0'
+                : 'opacity-0 scale-50 -translate-x-[30px]'
+                }`}
+            />
+          </div>
+          <img
+            src={point}
+            alt=""
+            className={`absolute bottom-[-10px] w-[15px] left-[20px] translate-x-[-4%] h-[15px] transition-all duration-[1200ms] ${isPhase4Visible
+              ? "opacity-100 scale-100 translate-x-0"
+              : "opacity-0 scale-50 -translate-x-[30px]"
+              }`}
+            style={{ transitionDelay: '100ms' }}
+          />
+          <div className={`flex flex-col transition-opacity duration-[1000ms] ${isPhase4Visible ? "opacity-100" : "opacity-0"}`}>
             <p className='text-[#fff] text-[12px] leading-[12px] font-semibold'>Q4 2027</p>
             <p className='text-[#fff] text-[12px] leading-[12px] font-semibold'>Modes & 1M Users</p>
             <p className='text-[#cdcdcd] text-[11px] leading-[11px] font-light mt-[8px] w-[157px]'>Your AI adds Calm, Inspire, Connect modes—your DAO scales us to 1M users on TikTok, Twitch, healing your world.</p>

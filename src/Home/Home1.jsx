@@ -84,7 +84,7 @@ const Home1 = () => {
         ref={page1Ref}
         className={`absolute top-[307px] left-[50%] translate-x-[-50%] z-50 w-[211px] transition-opacity duration-[4000ms] ${isPage1Visible ? 'opacity-100' : 'opacity-0'}`}
       >
-        <p className="text-[#ffffff] text-[28px] leading-[13px] font-semibold mb-[10px] text-center">
+        <p className="text-[#ffffff] text-[28px] leading-[13px] font-semibold mb-[10px] text-left translate-x-[9%]">
           {welcomeText}
         </p>
         <div className="h-[45px] relative overflow-hidden">
