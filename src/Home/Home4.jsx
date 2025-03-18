@@ -89,7 +89,7 @@ const Home4 = () => {
   }, []);
 
   return (
-    <div className="w-full h-auto min-h-[1380px] bg-[#0a1650] relative overflow-hidden py-[48px] mt-[-1px]">
+    <div className="w-full h-auto min-h-[1290px] bg-[#0a1650] relative overflow-hidden py-[48px] mt-[-1px]">
       {/* part1 start  */}
       <div
         ref={brainRef}
@@ -153,7 +153,7 @@ const Home4 = () => {
           ref={peopleRef}
           className={`transition-opacity duration-[4000ms] ${isPeopleVisible ? 'opacity-100' : 'opacity-0'}`}
         >
-          <img src={PEOPLE} alt="" className="h-[430px] w-[100%] z-0 mt-[15px]" />
+          <img src={PEOPLE} alt="" className="h-[100%] w-[100%] z-0 mt-[15px]" />
         </div>
 
         <div className="flex flex-col gap-[20px]">
