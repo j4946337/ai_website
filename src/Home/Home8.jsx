@@ -75,25 +75,27 @@ const Home8 = () => {
           ref={phase1Ref}
           className={`flex gap-[13px] relative ${isPhase1Visible ? '' : ''}`}
         >
-          <div
-            className={`flex flex-col absolute items-center top-[14px] left-[11px] z-10 transition-all duration-[1200ms] ${isPhase1Visible
-              ? "opacity-100 scale-100 translate-x-0"
-              : "opacity-0 scale-50 -translate-x-[20px]"
-              }`}
-          >
-            <span className='text-[#fff] text-[12px] leading-[12px] font-semibold'>Phase</span>
-            <span className='text-[#fff] text-[25px] leading-[25px] font-semibold'>1</span>
-          </div>
-          <div className='w-[54px] h-[103px] relative overflow-hidden'>
-            <img
-              src={rp_1}
-              alt=""
-              className={`w-[54px] h-[103px] absolute transition-all duration-[1200ms] ${isPhase1Visible
-                ? 'opacity-100 scale-100 translate-y-0'
-                : 'opacity-0 scale-0 translate-y-[100%]'
+          <div className='relative w-[54px] h-[103px]'>
+            <div
+              className={`flex flex-col absolute items-center top-[14px] left-[11px] z-10 transition-all duration-[1200ms] ${isPhase1Visible
+                ? "opacity-100 scale-100 translate-y-0"
+                : "opacity-0 scale-50 translate-y-[100%]"
                 }`}
-              style={{ transformOrigin: 'bottom center' }}
-            />
+            >
+              <span className='text-[#fff] text-[12px] leading-[12px] font-semibold'>Phase</span>
+              <span className='text-[#fff] text-[25px] leading-[25px] font-semibold'>1</span>
+            </div>
+            <div className='w-[54px] h-[103px] relative overflow-hidden'>
+              <img
+                src={rp_1}
+                alt=""
+                className={`w-[54px] h-[103px] absolute transition-all duration-[1200ms] ${isPhase1Visible
+                  ? 'opacity-100 scale-100 translate-y-0'
+                  : 'opacity-0 scale-0 translate-y-[100%]'
+                  }`}
+                style={{ transformOrigin: 'bottom center' }}
+              />
+            </div>
           </div>
           <img
             src={point}
@@ -113,25 +115,27 @@ const Home8 = () => {
           ref={phase2Ref}
           className={`flex gap-[13px] relative ${isPhase2Visible ? '' : ''}`}
         >
-          <div
-            className={`flex flex-col absolute items-center top-[14px] left-[11px] z-10 transition-all duration-[1200ms] ${isPhase2Visible
-              ? "opacity-100 scale-100 translate-x-0"
-              : "opacity-0 scale-50 -translate-x-[20px]"
-              }`}
-          >
-            <span className='text-[#fff] text-[12px] leading-[12px] font-semibold'>Phase</span>
-            <span className='text-[#fff] text-[25px] leading-[25px] font-semibold'>2</span>
-          </div>
-          <div className='w-[54px] h-[103px] relative overflow-hidden'>
-            <img
-              src={rp_2}
-              alt=""
-              className={`w-[54px] h-[103px] absolute transition-all duration-[1200ms] ${isPhase2Visible
-                ? 'opacity-100 scale-100 translate-y-0'
-                : 'opacity-0 scale-0 translate-y-[100%]'
+          <div className='relative w-[54px] h-[103px]'>
+            <div
+              className={`flex flex-col absolute items-center top-[14px] left-[11px] z-10 transition-all duration-[1200ms] ${isPhase2Visible
+                ? "opacity-100 scale-100 translate-y-0"
+                : "opacity-0 scale-50 translate-y-[100%]"
                 }`}
-              style={{ transformOrigin: 'bottom center' }}
-            />
+            >
+              <span className='text-[#fff] text-[12px] leading-[12px] font-semibold'>Phase</span>
+              <span className='text-[#fff] text-[25px] leading-[25px] font-semibold'>2</span>
+            </div>
+            <div className='w-[54px] h-[103px] relative overflow-hidden'>
+              <img
+                src={rp_2}
+                alt=""
+                className={`w-[54px] h-[103px] absolute transition-all duration-[1200ms] ${isPhase2Visible
+                  ? 'opacity-100 scale-100 translate-y-0'
+                  : 'opacity-0 scale-0 translate-y-[100%]'
+                  }`}
+                style={{ transformOrigin: 'bottom center' }}
+              />
+            </div>
           </div>
           <img
             src={point}
@@ -151,25 +155,27 @@ const Home8 = () => {
           ref={phase3Ref}
           className={`flex gap-[13px] relative ${isPhase3Visible ? '' : ''}`}
         >
-          <div
-            className={`flex flex-col absolute items-center top-[14px] left-[11px] z-10 transition-all duration-[1200ms] ${isPhase3Visible
-              ? "opacity-100 scale-100 translate-x-0"
-              : "opacity-0 scale-50 -translate-x-[20px]"
-              }`}
-          >
-            <span className='text-[#fff] text-[12px] leading-[12px] font-semibold'>Phase</span>
-            <span className='text-[#fff] text-[25px] leading-[25px] font-semibold'>3</span>
-          </div>
-          <div className='w-[54px] h-[103px] relative overflow-hidden'>
-            <img
-              src={rp_3}
-              alt=""
-              className={`w-[54px] h-[103px] absolute transition-all duration-[1200ms] ${isPhase3Visible
-                ? 'opacity-100 scale-100 translate-y-0'
-                : 'opacity-0 scale-0 translate-y-[100%]'
+          <div className='relative w-[54px] h-[103px]'>
+            <div
+              className={`flex flex-col absolute items-center top-[14px] left-[11px] z-10 transition-all duration-[1200ms] ${isPhase3Visible
+                ? "opacity-100 scale-100 translate-y-0"
+                : "opacity-0 scale-50 translate-y-[100%]"
                 }`}
-              style={{ transformOrigin: 'bottom center' }}
-            />
+            >
+              <span className='text-[#fff] text-[12px] leading-[12px] font-semibold'>Phase</span>
+              <span className='text-[#fff] text-[25px] leading-[25px] font-semibold'>3</span>
+            </div>
+            <div className='w-[54px] h-[103px] relative overflow-hidden'>
+              <img
+                src={rp_3}
+                alt=""
+                className={`w-[54px] h-[103px] absolute transition-all duration-[1200ms] ${isPhase3Visible
+                  ? 'opacity-100 scale-100 translate-y-0'
+                  : 'opacity-0 scale-0 translate-y-[100%]'
+                  }`}
+                style={{ transformOrigin: 'bottom center' }}
+              />
+            </div>
           </div>
           <img
             src={point}
@@ -189,25 +195,27 @@ const Home8 = () => {
           ref={phase4Ref}
           className={`flex gap-[13px] relative ${isPhase4Visible ? '' : ''}`}
         >
-          <div
-            className={`flex flex-col absolute items-center top-[14px] left-[11px] z-10 transition-all duration-[1200ms] ${isPhase4Visible
-              ? "opacity-100 scale-100 translate-x-0"
-              : "opacity-0 scale-50 -translate-x-[20px]"
-              }`}
-          >
-            <span className='text-[#fff] text-[12px] leading-[12px] font-semibold'>Phase</span>
-            <span className='text-[#fff] text-[25px] leading-[25px] font-semibold'>4</span>
-          </div>
-          <div className='w-[54px] h-[103px] relative overflow-hidden'>
-            <img
-              src={rp_4}
-              alt=""
-              className={`w-[54px] h-[103px] absolute transition-all duration-[1200ms] ${isPhase4Visible
-                ? 'opacity-100 scale-100 translate-y-0'
-                : 'opacity-0 scale-0 translate-y-[100%]'
+          <div className='relative w-[54px] h-[103px]'>
+            <div
+              className={`flex flex-col absolute items-center top-[14px] left-[11px] z-10 transition-all duration-[1200ms] ${isPhase4Visible
+                ? "opacity-100 scale-100 translate-y-0"
+                : "opacity-0 scale-50 translate-y-[100%]"
                 }`}
-              style={{ transformOrigin: 'bottom center' }}
-            />
+            >
+              <span className='text-[#fff] text-[12px] leading-[12px] font-semibold'>Phase</span>
+              <span className='text-[#fff] text-[25px] leading-[25px] font-semibold'>4</span>
+            </div>
+            <div className='w-[54px] h-[103px] relative overflow-hidden'>
+              <img
+                src={rp_4}
+                alt=""
+                className={`w-[54px] h-[103px] absolute transition-all duration-[1200ms] ${isPhase4Visible
+                  ? 'opacity-100 scale-100 translate-y-0'
+                  : 'opacity-0 scale-0 translate-y-[100%]'
+                  }`}
+                style={{ transformOrigin: 'bottom center' }}
+              />
+            </div>
           </div>
           <img
             src={point}
