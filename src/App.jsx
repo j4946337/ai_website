@@ -10,7 +10,7 @@ import Home7 from './Home/Home7'
 import Home6 from './Home/Home6'
 import Home8 from './Home/Home8'
 import Home5_1 from './Home/Home5_1'
-
+import Home9 from './Home/Home9'
 function App() {
   const containerRef = useRef(null)
   const [scale, setScale] = useState(1)
@@ -110,6 +110,7 @@ function App() {
         <Home6 />
         <Home7 />
         <Home8 />
+        <Home9 />
       </main>
     </div>
   )

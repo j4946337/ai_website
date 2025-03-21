@@ -54,7 +54,7 @@ const Home8 = () => {
   }, []);
 
   return (
-    <div className="home_8 h-[700px] bg-[#0b0f20] w-full pt-[37px] mt-[-1px]">
+    <div className="home_8 h-[650px] bg-[#0b0f20] w-full pt-[37px] mt-[-1px]">
       <div
         ref={titleRef}
         className={`flex flex-col items-center ${isTitleVisible ? '' : ''}`}
