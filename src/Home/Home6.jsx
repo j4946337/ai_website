@@ -3,8 +3,11 @@ import me_brain from '../assets/images/Ai_D_8.png'
 import me_mobile from '../assets/images/Ai_D_9.png'
 import me_cloud from '../assets/images/Ai_D_10.png'
 import { useEffect, useState, useRef } from 'react';
+import { useLanguage } from "../context/LanguageContext";
+import translations from "../assets/multi_language.json";
 
 const Home6 = () => {
+  const { language } = useLanguage();
   const [isTitleVisible, setIsTitleVisible] = useState(false);
   const [isCard1Visible, setIsCard1Visible] = useState(false);
   const [isCard2Visible, setIsCard2Visible] = useState(false);
@@ -14,6 +17,11 @@ const Home6 = () => {
   const card1Ref = useRef(null);
   const card2Ref = useRef(null);
   const card3Ref = useRef(null);
+
+  const getTranslation = (id) => {
+    const translation = translations.find(t => t.id === id);
+    return translation ? translation[language] : '';
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -55,12 +63,12 @@ const Home6 = () => {
         <div
           className={`text-[#ffffff] text-[34px] leading-[34px] font-semibold z-[100] transition-all duration-[1200ms] ${isTitleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[30px]'}`}
         >
-          YOUR TECH EDGE
+          {getTranslation(53)} {/* YOUR TECH EDGE */}
         </div>
         <div
           className={`text-[#94a4f2] text-[17px] leading-[17px] font-light z-[100] transition-opacity duration-[4000ms] ${isTitleVisible ? 'opacity-100' : 'opacity-0'}`}
         >
-          Powering Your Emotional Future
+          {getTranslation(54)} {/* Powering Your Emotional Future */}
         </div>
       </div>
 
@@ -72,9 +80,11 @@ const Home6 = () => {
         >
           <img src={me_brain} alt="me_brain" className='absolute w-[90px] h-[100px] translate-x-[-40%] translate-y-[-15%]' />
           <div className=' w-[148px] mt-[13px] ml-[66px]'>
-            <div className='text-[#ffffff] text-[13px] leading-[13px] font-semibold'>On-Chain LLM</div>
+            <div className='text-[#ffffff] text-[13px] leading-[13px] font-semibold'>
+              {getTranslation(55)} {/* On-Chain LLM */}
+            </div>
             <div className='text-[#ffffff] text-[11px] leading-[11px] font-light'>
-              Your encrypted chats (IPFS/Filecoin) train a bias-free brain—spam-proof with smart parsing.
+              {getTranslation(56)} {/* Your encrypted chats (IPFS/Filecoin) train a bias-free brain—spam-proof with smart parsing. */}
             </div>
           </div>
         </div>
@@ -84,9 +94,11 @@ const Home6 = () => {
         >
           <img src={me_mobile} alt="me_mobile" className='absolute  w-[90px] h-[100px] right-0 bottom-[32px] translate-x-[40%]' />
           <div className='mr-[57px] w-[148px] mt-[25px] float-right'>
-            <div className='text-[#ffffff] text-[13px] leading-[13px] font-semibold float-right'>Federated Learning</div>
+            <div className='text-[#ffffff] text-[13px] leading-[13px] font-semibold float-right'>
+              {getTranslation(57)} {/* Federated Learning */}
+            </div>
             <div className='text-[#ffffff] text-[11px] leading-[11px] font-light float-right'>
-              Your device (phone or NVIDIA desktop) crafts your AI locally.
+              {getTranslation(58)} {/* Your device (phone or NVIDIA desktop) crafts your AI locally. */}
             </div>
           </div>
         </div>
@@ -96,9 +108,11 @@ const Home6 = () => {
         >
           <img src={me_cloud} alt="me_cloud" className='absolute w-[90px] h-[100px] translate-x-[-40%] translate-y-[-15%]' />
           <div className=' w-[114px] mt-[20px] ml-[66px]'>
-            <div className='text-[#ffffff] text-[13px] leading-[13px] font-semibold'>MCP & OpenAPI</div>
+            <div className='text-[#ffffff] text-[13px] leading-[13px] font-semibold'>
+              {getTranslation(59)} {/* MCP & OpenAPI */}
+            </div>
             <div className='text-[#ffffff] text-[11px] leading-[11px] font-light'>
-              Your companion roams free—limitless, yours.
+              {getTranslation(60)} {/* Your companion roams free—limitless, yours. */}
             </div>
           </div>
         </div>
