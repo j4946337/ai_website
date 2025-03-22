@@ -3,8 +3,11 @@ import Ai_B_2 from '../assets/images/Ai_B_2.png'
 import Ai_B_3 from '../assets/images/Ai_B_3.png'
 import Ai_B_4 from '../assets/images/Ai_B_4.png'
 import { useEffect, useState, useRef } from 'react';
+import { useLanguage } from "../context/LanguageContext";
+import translations from "../assets/multi_language.json";
 
 const Home2 = () => {
+  const { language } = useLanguage();
   const [isTitleVisible, setIsTitleVisible] = useState(false);
   const [isIconsVisible, setIsIconsVisible] = useState(false);
   const [isDescriptionVisible, setIsDescriptionVisible] = useState(false);
@@ -15,6 +18,11 @@ const Home2 = () => {
     icon2: false,
     icon3: false
   });
+
+  const getTranslation = (id) => {
+    const translation = translations.find(t => t.id === id);
+    return translation ? translation[language] : '';
+  };
 
   const titleRef = useRef(null);
   const iconsRef = useRef(null);
@@ -85,15 +93,15 @@ const Home2 = () => {
               className={`text-[#ff6b4c] block transition-all duration-700 transform
                 ${titleLine1Visible ? 'translate-y-0 opacity-100' : 'translate-y-[20px] opacity-0'}`}
             >
-              ME AI
+              {getTranslation(22)}
             </span>
           </div>
-          <div className="overflow-hidden h-[35px]">
+          <div className="overflow-hidden h-[45px]">
             <span
-              className={`text-[#ffffff] block transition-all duration-700 transform
+              className={`${language === 'english' ? '' : 'mt-[5px]'} text-[#ffffff] block transition-all duration-700 transform
                 ${titleLine2Visible ? 'translate-y-0 opacity-100' : 'translate-y-[20px] opacity-0'}`}
             >
-              UNVEILED
+              {getTranslation(8)}
             </span>
           </div>
         </div>
@@ -108,7 +116,7 @@ const Home2 = () => {
                 ${iconsVisibility.icon1 ? 'translate-y-0 opacity-100' : 'translate-y-[20px] opacity-0'}`}
             >
               <img src={Ai_B_2} alt="" className='w-[37px] h-[37px]' />
-              <p className='text-[12px] text-[#cfd5f6]'>COMPANION</p>
+              <p className='text-[12px] text-[#cfd5f6]'>{getTranslation(9)}</p>
             </div>
           </div>
 
@@ -118,7 +126,7 @@ const Home2 = () => {
                 ${iconsVisibility.icon2 ? 'translate-y-0 opacity-100' : 'translate-y-[20px] opacity-0'}`}
             >
               <img src={Ai_B_3} alt="" className='w-[37px] h-[37px]' />
-              <p className='text-[12px] text-[#cfd5f6] text-center'>RULES</p>
+              <p className='text-[12px] text-[#cfd5f6] text-center'>{getTranslation(10)}</p>
             </div>
           </div>
 
@@ -128,7 +136,7 @@ const Home2 = () => {
                 ${iconsVisibility.icon3 ? 'translate-y-0 opacity-100' : 'translate-y-[20px] opacity-0'}`}
             >
               <img src={Ai_B_4} alt="" className='w-[37px] h-[37px]' />
-              <p className='text-[12px] text-[#cfd5f6]'>REWARDS</p>
+              <p className='text-[12px] text-[#cfd5f6]'>{getTranslation(11)}</p>
             </div>
           </div>
         </div>
@@ -136,7 +144,7 @@ const Home2 = () => {
           ref={descriptionRef}
           className={`w-[253px] mt-[59px] transition-opacity duration-[4000ms] ${isDescriptionVisible ? 'opacity-100' : 'opacity-0'}`}
         >
-          <p className='text-[11px] leading-[11px] text-[#cfd5f6] font-extralight'>ME AI fights for you—a decentralized space where you and your community build the best AI companion on a blockchain LLM. Train-to-Earn gives you ME tokens as you shape your friend across different types (e.g., "Creative Dreamer"), easing your loneliness with a caring, fair partner.</p>
+          <p className='text-[11px] leading-[11px] text-[#cfd5f6] font-extralight'>{getTranslation(12)}</p>
         </div>
       </div>
     </div>
