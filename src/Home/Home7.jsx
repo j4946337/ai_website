@@ -1,8 +1,11 @@
 import chart from '../assets/images/Ai_E_1.png'
 import me_imf from '../assets/images/Ai_E_2.png'
 import { useEffect, useState, useRef } from 'react';
+import { useLanguage } from "../context/LanguageContext";
+import translations from "../assets/multi_language.json";
 
 const Home7 = () => {
+  const { language } = useLanguage();
   const [isTitleVisible, setIsTitleVisible] = useState(false);
   const [isAmountVisible, setIsAmountVisible] = useState(false);
   const [isChartVisible, setIsChartVisible] = useState(false);
@@ -14,6 +17,11 @@ const Home7 = () => {
   const chartRef = useRef(null);
   const descriptionRef = useRef(null);
   const tokenomicsRef = useRef(null);
+
+  const getTranslation = (id) => {
+    const translation = translations.find(t => t.id === id);
+    return translation ? translation[language] : '';
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -58,12 +66,12 @@ const Home7 = () => {
           <span
             className={`text-[#ffffff] text-[34px] leading-[34px] font-semibold transition-all duration-[1200ms] ${isTitleVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[50px]'}`}
           >
-            TOKENOMICS
+            {getTranslation(61)}
           </span>
           <span
             className={`text-[#94a4f2] text-[17px] leading-[17px] font-light transition-opacity duration-[4000ms] ${isTitleVisible ? 'opacity-100' : 'opacity-0'}`}
           >
-            Built for You
+            {getTranslation(62)}
           </span>
         </div>
         <div
@@ -84,7 +92,7 @@ const Home7 = () => {
         ref={descriptionRef}
         className={`text-[#ffffff] text-[11px] leading-[11px] font-light text-center mt-[22px] transition-opacity duration-[4000ms] ${isDescriptionVisible ? 'opacity-100' : 'opacity-0'}`}
       >
-        Fair launch, no pre-mine—your wealth, your way
+        {getTranslation(73)}
       </p>
       <div
         ref={tokenomicsRef}
@@ -96,8 +104,8 @@ const Home7 = () => {
         >
           <div className='w-[14px] h-[14px] bg-[#ab1fae] rounded-[4px]'></div>
           <div className='flex flex-col'>
-            <span className='text-[#ffffff] text-[13px] leading-[13px] font-semibold'>51%/510M EQ Farming</span>
-            <span className='text-[#ffffff] text-[11px] leading-[11px] font-light'>You earn for your heartfelt chats.</span>
+            <span className='text-[#ffffff] text-[13px] leading-[13px] font-semibold'>{getTranslation(69)}</span>
+            <span className='text-[#ffffff] text-[11px] leading-[11px] font-light'>{getTranslation(70)}</span>
           </div>
         </div>
         <div
@@ -106,8 +114,8 @@ const Home7 = () => {
         >
           <div className='w-[14px] h-[14px] bg-[#e77b2f] rounded-[4px]'></div>
           <div className='flex flex-col'>
-            <span className='text-[#ffffff] text-[13px] leading-[13px] font-semibold'>20%/200M Team</span>
-            <span className='text-[#ffffff] text-[11px] leading-[11px] font-light'>Fuels your vision.</span>
+            <span className='text-[#ffffff] text-[13px] leading-[13px] font-semibold'>{getTranslation(71)}</span>
+            <span className='text-[#ffffff] text-[11px] leading-[11px] font-light'>{getTranslation(72)}</span>
           </div>
         </div>
         <div
@@ -116,8 +124,8 @@ const Home7 = () => {
         >
           <div className='w-[14px] h-[14px] bg-[#a1a1a2] rounded-[4px]'></div>
           <div className='flex flex-col'>
-            <span className='text-[#ffffff] text-[13px] leading-[13px] font-semibold'>10%/100M Investors</span>
-            <span className='text-[#ffffff] text-[11px] leading-[11px] font-light'>Grows your reach.</span>
+            <span className='text-[#ffffff] text-[13px] leading-[13px] font-semibold'>{getTranslation(63)}</span>
+            <span className='text-[#ffffff] text-[11px] leading-[11px] font-light'>{getTranslation(64)}</span>
           </div>
         </div>
         <div
@@ -126,8 +134,8 @@ const Home7 = () => {
         >
           <div className='w-[14px] h-[14px] bg-[#f9bb00] rounded-[4px]'></div>
           <div className='flex flex-col'>
-            <span className='text-[#ffffff] text-[13px] leading-[13px] font-semibold'>10%/100M Marketing</span>
-            <span className='text-[#ffffff] text-[11px] leading-[11px] font-light'>Amplifies your voice.</span>
+            <span className='text-[#ffffff] text-[13px] leading-[13px] font-semibold'>{getTranslation(65)}</span>
+            <span className='text-[#ffffff] text-[11px] leading-[11px] font-light'>{getTranslation(66)}</span>
           </div>
         </div>
         <div
@@ -136,8 +144,8 @@ const Home7 = () => {
         >
           <div className='w-[14px] h-[14px] bg-[#6daa45] rounded-[4px]'></div>
           <div className='flex flex-col'>
-            <span className='text-[#ffffff] text-[13px] leading-[13px] font-semibold'>9%/90M Staking</span>
-            <span className='text-[#ffffff] text-[11px] leading-[11px] font-light'>Rewards your stake.</span>
+            <span className='text-[#ffffff] text-[13px] leading-[13px] font-semibold'>{getTranslation(67)}</span>
+            <span className='text-[#ffffff] text-[11px] leading-[11px] font-light'>{getTranslation(68)}</span>
           </div>
         </div>
       </div>
