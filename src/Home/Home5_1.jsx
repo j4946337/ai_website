@@ -3,8 +3,11 @@ import mobile_2 from '../assets/images/Ai_E_10.png'
 import mobile_3 from '../assets/images/Ai_E_11.png'
 import pint from '../assets/images/Ai_E_12.png'
 import { useState, useEffect, useRef } from 'react'
+import { useLanguage } from "../context/LanguageContext";
+import translations from "../assets/multi_language.json";
 
 const Home5_1 = () => {
+  const { language } = useLanguage();
   const [activeIndex, setActiveIndex] = useState(0)
   const images = [mobile_1, mobile_2, mobile_3]
   const [positions, setPositions] = useState([
@@ -22,6 +25,11 @@ const Home5_1 = () => {
   const titleRef = useRef(null);
   const carouselRef = useRef(null);
   const descriptionRef = useRef(null);
+
+  const getTranslation = (id) => {
+    const translation = translations.find(t => t.id === id);
+    return translation ? translation[language] : '';
+  };
 
   useEffect(() => {
     // 轮播图效果
@@ -81,7 +89,7 @@ const Home5_1 = () => {
 
   return (
     <div className="w-full h-[600px] bg-[#0a1650] mt-[-1px]">
-      <div className='flex flex-col gap-[15%] '>
+      <div className='flex flex-col gap-[15%]'>
         <div
           ref={titleRef}
           className={`w-full flex flex-col ${isTitleVisible ? '' : ''}`}
@@ -89,22 +97,22 @@ const Home5_1 = () => {
           <div
             className={`text-[#fff] text-[34px] leading-[34px] font-semibold text-center transition-all duration-[1200ms] ${isTitleVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-[50px]'}`}
           >
-            CHAT WITH
+            {getTranslation(5101)} {/* CHAT WITH */}
           </div>
           <div
             className={`text-[#fff] text-[34px] leading-[34px] font-semibold text-center transition-all duration-[1200ms] ${isTitleVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[50px]'}`}
           >
-            YOUR AI
+            {getTranslation(5102)} {/* YOUR AI */}
           </div>
           <div
             className={`text-[#fff] text-[34px] leading-[34px] font-thin text-center transition-opacity duration-[4000ms] ${isTitleVisible ? 'opacity-100' : 'opacity-0'}`}
           >
-            ANYTIME
+            {getTranslation(5103)} {/* ANYTIME */}
           </div>
           <div
             className={`text-[#fff] text-[34px] leading-[34px] font-thin text-center transition-opacity duration-[4000ms] ${isTitleVisible ? 'opacity-100' : 'opacity-0'}`}
           >
-            ANYWHERE
+            {getTranslation(5104)} {/* ANYWHERE */}
           </div>
         </div>
 
@@ -135,7 +143,7 @@ const Home5_1 = () => {
           ref={descriptionRef}
           className={`text-[#cdcdcd] text-[11px] w-[225px] leading-[11px] font-light mx-auto transition-opacity duration-[4000ms] ${isDescriptionVisible ? 'opacity-100' : 'opacity-0'}`}
         >
-          "Shape your AI companion—choose your style, voice, and personality (e.g., "Empathetic Listener")—and chat to ease your loneliness. Your talks earn ME tokens via Train-to-Earn, growing your emotional ally with the community's support, all on your device!"
+          {getTranslation(52)} {/* Shape your AI companion... */}
         </div>
       </div>
     </div>
