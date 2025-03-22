@@ -4,8 +4,11 @@ import rp_2 from '../assets/images/Ai_E_5.png'
 import rp_3 from '../assets/images/Ai_E_6.png'
 import rp_4 from '../assets/images/Ai_E_7.png'
 import { useEffect, useState, useRef } from 'react';
+import { useLanguage } from "../context/LanguageContext";
+import translations from "../assets/multi_language.json";
 
 const Home8 = () => {
+  const { language } = useLanguage();
   const [isTitleVisible, setIsTitleVisible] = useState(false);
   const [isPhase1Visible, setIsPhase1Visible] = useState(false);
   const [isPhase2Visible, setIsPhase2Visible] = useState(false);
@@ -17,6 +20,11 @@ const Home8 = () => {
   const phase2Ref = useRef(null);
   const phase3Ref = useRef(null);
   const phase4Ref = useRef(null);
+
+  const getTranslation = (id) => {
+    const translation = translations.find(t => t.id === id);
+    return translation ? translation[language] : '';
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -62,12 +70,12 @@ const Home8 = () => {
         <div
           className={`text-[#ffffff] text-[34px] leading-[34px] font-semibold text-left transition-all duration-[1200ms] ${isTitleVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[50px]'}`}
         >
-          ROADMAP
+          {getTranslation(74)} {/* ROADMAP */}
         </div>
         <div
           className={`text-[#94a4f2] text-[15px] leading-[15px] font-light text-left transition-opacity duration-[4000ms] ${isTitleVisible ? 'opacity-100' : 'opacity-0'}`}
         >
-          From Your First Chat to Global Impact
+          {getTranslation(75)} {/* From Your First Chat to Global Impact */}
         </div>
       </div>
       <div className='mt-[38px] flex flex-col ml-[54px] gap-[30px] '>
@@ -82,7 +90,7 @@ const Home8 = () => {
                 : "opacity-0 scale-50 translate-y-[100%]"
                 }`}
             >
-              <span className='text-[#fff] text-[12px] leading-[12px] font-semibold'>Phase</span>
+              <span className='text-[#fff] text-[12px] leading-[12px] font-semibold'>{getTranslation(76)}</span> {/* Phase */}
               <span className='text-[#fff] text-[25px] leading-[25px] font-semibold'>1</span>
             </div>
             <div className='w-[54px] h-[103px] relative overflow-hidden'>
@@ -106,9 +114,8 @@ const Home8 = () => {
               }`}
           />
           <div className={`flex flex-col transition-opacity duration-[1000ms] ${isPhase1Visible ? "opacity-100" : "opacity-0"}`}>
-            <p className='text-[#fff] text-[12px] leading-[12px] font-semibold'>Q2 2025</p>
-            <p className='text-[#fff] text-[12px] leading-[12px] font-semibold'>H5 Beta</p>
-            <p className='text-[#cdcdcd] text-[11px] leading-[11px] font-light mt-[8px] w-[154px]'>Your H5 prototype launches—customize your AI, earn ME tokens, and shape our companion with your community's input.</p>
+            <p className='text-[#fff] text-[12px] leading-[12px] font-semibold'>{getTranslation(77)}</p> {/* Q2 2025 H5 Beta */}
+            <p className='text-[#cdcdcd] text-[11px] leading-[11px] font-light mt-[8px] w-[154px]'>{getTranslation(78)}</p> {/* Your H5 prototype launches—customize your AI, earn ME tokens, and shape our companion with your community's input. */}
           </div>
         </div>
         <div
@@ -122,7 +129,7 @@ const Home8 = () => {
                 : "opacity-0 scale-50 translate-y-[100%]"
                 }`}
             >
-              <span className='text-[#fff] text-[12px] leading-[12px] font-semibold'>Phase</span>
+              <span className='text-[#fff] text-[12px] leading-[12px] font-semibold'>{getTranslation(76)}</span> {/* Phase */}
               <span className='text-[#fff] text-[25px] leading-[25px] font-semibold'>2</span>
             </div>
             <div className='w-[54px] h-[103px] relative overflow-hidden'>
@@ -146,9 +153,8 @@ const Home8 = () => {
               }`}
           />
           <div className={`flex flex-col transition-opacity duration-[1000ms] ${isPhase2Visible ? "opacity-100" : "opacity-0"}`}>
-            <p className='text-[#fff] text-[12px] leading-[12px] font-semibold'>Q3 2025</p>
-            <p className='text-[#fff] text-[12px] leading-[12px] font-semibold'>On-Chain & App</p>
-            <p className='text-[#cdcdcd] text-[11px] leading-[11px] font-light mt-[8px] w-[156px]'>Your chats power an on-chain LLM, NFTs launch, and an app connects you—your community builds a bias-free ally.</p>
+            <p className='text-[#fff] text-[12px] leading-[12px] font-semibold'>{getTranslation(79)}</p> {/* Q3 2025 On-Chain & App */}
+            <p className='text-[#cdcdcd] text-[11px] leading-[11px] font-light mt-[8px] w-[156px]'>{getTranslation(80)}</p> {/* Your chats power an on-chain LLM, NFTs launch, and an app connects you—your community builds a bias-free ally. */}
           </div>
         </div>
         <div
@@ -162,7 +168,7 @@ const Home8 = () => {
                 : "opacity-0 scale-50 translate-y-[100%]"
                 }`}
             >
-              <span className='text-[#fff] text-[12px] leading-[12px] font-semibold'>Phase</span>
+              <span className='text-[#fff] text-[12px] leading-[12px] font-semibold'>{getTranslation(76)}</span> {/* Phase */}
               <span className='text-[#fff] text-[25px] leading-[25px] font-semibold'>3</span>
             </div>
             <div className='w-[54px] h-[103px] relative overflow-hidden'>
@@ -186,9 +192,8 @@ const Home8 = () => {
               }`}
           />
           <div className={`flex flex-col transition-opacity duration-[1000ms] ${isPhase3Visible ? "opacity-100" : "opacity-0"}`}>
-            <p className='text-[#fff] text-[12px] leading-[12px] font-semibold'>Q2 2026</p>
-            <p className='text-[#fff] text-[12px] leading-[12px] font-semibold'>Metaverse & Celeb Voices</p>
-            <p className='text-[#cdcdcd] text-[11px] leading-[11px] font-light mt-[8px] w-[156px]'>Your Virtual City opens—AR, metaverse, and celebrity voices join, crafted with your community, boosting your bond.</p>
+            <p className='text-[#fff] text-[12px] leading-[12px] font-semibold'>{getTranslation(81)}</p> {/* Q2 2026 Metaverse & Celeb Voices */}
+            <p className='text-[#cdcdcd] text-[11px] leading-[11px] font-light mt-[8px] w-[156px]'>{getTranslation(82)}</p> {/* Your Virtual City opens—AR, metaverse, and celebrity voices join, crafted with your community, boosting your bond. */}
           </div>
         </div>
         <div
@@ -202,7 +207,7 @@ const Home8 = () => {
                 : "opacity-0 scale-50 translate-y-[100%]"
                 }`}
             >
-              <span className='text-[#fff] text-[12px] leading-[12px] font-semibold'>Phase</span>
+              <span className='text-[#fff] text-[12px] leading-[12px] font-semibold'>{getTranslation(76)}</span> {/* Phase */}
               <span className='text-[#fff] text-[25px] leading-[25px] font-semibold'>4</span>
             </div>
             <div className='w-[54px] h-[103px] relative overflow-hidden'>
@@ -226,9 +231,8 @@ const Home8 = () => {
               }`}
           />
           <div className={`flex flex-col transition-opacity duration-[1000ms] ${isPhase4Visible ? "opacity-100" : "opacity-0"}`}>
-            <p className='text-[#fff] text-[12px] leading-[12px] font-semibold'>Q4 2027</p>
-            <p className='text-[#fff] text-[12px] leading-[12px] font-semibold'>Modes & 1M Users</p>
-            <p className='text-[#cdcdcd] text-[11px] leading-[11px] font-light mt-[8px] w-[157px]'>Your AI adds Calm, Inspire, Connect modes—your DAO scales us to 1M users on TikTok, Twitch, healing your world.</p>
+            <p className='text-[#fff] text-[12px] leading-[12px] font-semibold'>{getTranslation(83)}</p> {/* Q4 2027 Modes & 1M Users */}
+            <p className='text-[#cdcdcd] text-[11px] leading-[11px] font-light mt-[8px] w-[157px]'>{getTranslation(84)}</p> {/* Your AI adds Calm, Inspire, Connect modes—your DAO scales us to 1M users on TikTok, Twitch, healing your world. */}
           </div>
         </div>
       </div>
