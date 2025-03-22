@@ -11,6 +11,8 @@ import Home6 from './Home/Home6'
 import Home8 from './Home/Home8'
 import Home5_1 from './Home/Home5_1'
 import Home9 from './Home/Home9'
+import { LanguageProvider } from './context/LanguageContext'
+
 function App() {
   const containerRef = useRef(null)
   const [scale, setScale] = useState(1)
@@ -83,36 +85,37 @@ function App() {
   }, [scale]);
 
   return (
-    <div
-      className="scale-container overflow-hidden w-full"
-      style={{
-        height: `${contentHeight * scale}px` // 直接设置容器高度
-      }}
-    >
-      <main
-        ref={containerRef}
-        className="origin-top-left"
+    <LanguageProvider>
+      <div
+        className="scale-container overflow-hidden w-full"
         style={{
-          width: `${containerWidth}px`,
-          transform: `scale(${scale})`,
-          height: `${contentHeight}px`, // 使用计算的高度
-          transformOrigin: 'top left'
+          height: `${contentHeight * scale}px`
         }}
       >
-
-        <Header />
-        <Home1 />
-        <Home2 />
-        <Home3 />
-        <Home4 />
-        <Home5 />
-        <Home5_1 />
-        <Home6 />
-        <Home7 />
-        <Home8 />
-        <Home9 />
-      </main>
-    </div>
+        <main
+          ref={containerRef}
+          className="origin-top-left"
+          style={{
+            width: `${containerWidth}px`,
+            transform: `scale(${scale})`,
+            height: `${contentHeight}px`, // 使用计算的高度
+            transformOrigin: 'top left'
+          }}
+        >
+          <Header />
+          <Home1 />
+          <Home2 />
+          <Home3 />
+          <Home4 />
+          <Home5 />
+          <Home5_1 />
+          <Home6 />
+          <Home7 />
+          <Home8 />
+          <Home9 />
+        </main>
+      </div>
+    </LanguageProvider>
   )
 }
 

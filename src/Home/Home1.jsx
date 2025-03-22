@@ -1,10 +1,13 @@
-import HOME_1 from "../assets/images/home_1_1.png";
+import HOME_1 from "../assets/images/Ai_A_2.png";
 import HOME_1_2 from "../assets/images/bg.png";
 import HOME_1_2_1 from "../assets/images/Ai_A_11_mbile.png";
 import home_2 from '../assets/images/home_2_1.png'
 import { useEffect, useState, useRef } from 'react';
+import { useLanguage } from "../context/LanguageContext";
+import translations from "../assets/multi_language.json";
 
 const Home1 = () => {
+  const { language } = useLanguage();
   const [isPage1Visible, setIsPage1Visible] = useState(false);
   const [isPage2Visible, setIsPage2Visible] = useState(false);
   const [welcomeText, setWelcomeText] = useState('');
@@ -75,6 +78,11 @@ const Home1 = () => {
     }
   }, [isPage2Visible]);
 
+  const getTranslation = (id) => {
+    const translation = translations.find(t => t.id === id);
+    return translation ? translation[language] : '';
+  };
+
   return (
     <div className="home_1 w-full bg-[#0a1650] h-[910px] relative mt-[-1px]">
       {/*  Page 1_1 */}
@@ -85,7 +93,7 @@ const Home1 = () => {
         className={`absolute top-[307px] left-[50%] translate-x-[-50%] z-50 w-[211px] transition-opacity duration-[4000ms] ${isPage1Visible ? 'opacity-100' : 'opacity-0'}`}
       >
         <p className="text-[#ffffff] text-[28px] leading-[13px] font-semibold mb-[10px] text-left translate-x-[9%]">
-          {welcomeText}
+          {language === 'english' ? welcomeText : getTranslation(2)}
         </p>
         <div className="h-[45px] relative overflow-hidden">
           <img
@@ -95,42 +103,34 @@ const Home1 = () => {
               ${isImageVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[20px]'}`}
           />
         </div>
-        <div className="text-[#ffffff] text-[10px] leading-[20px] font-extralight mt-[15px]  text-center text-nowrap ">
-          <p className=" text-center text-nowrap">
-            Your emotions need a friend. ME AI is your safe
-          </p>
-          <p className=" text-center text-nowrap">
-            space—an AI that listens, learns,and pays you in
-          </p>
-          <p className="text-center text-nowrap">
-            ME tokens. Your journey starts now.
-          </p>
+        <div className="text-[#ffffff] text-[10px] leading-[20px] font-extralight mt-[15px] text-center ">
+          {getTranslation(3)}
         </div>
-        <button className="bg-[#ff6b4c] rounded-full w-[98px] h-[31px] text-[#ffffff] text-[14px] font-normal mt-[16px]  mx-[50%] translate-x-[-50%] ">
-          Chat Now
+        <button className="bg-[#ff6b4c] rounded-full w-[98px] h-[31px] text-[#ffffff] text-[14px] font-normal mt-[16px] mx-[50%] translate-x-[-50%]">
+          {getTranslation(4)}
         </button>
       </div>
       {/* Page 1_2 */}
       <img src={home_2} alt="home_2" className='absolute home_2_1 top-[480px] w-[80%] z-1' />
       <div
         ref={page2Ref}
-        className={`absolute top-[657px] left-[104px] z-10 transition-opacity duration-[4000ms] ${isPage2Visible ? 'opacity-100' : 'opacity-0'}`}
+        className={`absolute top-[657px] right-[31px] z-10 transition-opacity duration-[4000ms] ${isPage2Visible ? 'opacity-100' : 'opacity-0'}`}
       >
-        <div className="text-[#ffffff] text-[34px] leading-[34px] font-semibold overflow-hidden">
+        <div className="text-[#ffffff] text-[34px] leading-[34px] text-right font-semibold overflow-hidden">
           <div className="overflow-hidden">
             <span
               className={`block text-right transition-all duration-700 transform
                 ${titleVisibility.line1 ? 'translate-x-0 opacity-100' : 'translate-x-[-50px] opacity-0'}`}
             >
-              THE
+              {getTranslation(501)}
             </span>
           </div>
           <div className="overflow-hidden">
             <span
               className={`block text-right transition-all duration-700 transform
-                ${titleVisibility.line2 ? 'translate-x-0 opacity-100' : 'translate-x-[-50px] opacity-0'}`}
+                ${titleVisibility.line2 ? 'translate-x-0 opacity-100' : 'translate-x-[-50px] opacity-0'} `}
             >
-              EMOTIONAL
+              {getTranslation(502)}
             </span>
           </div>
           <div className="overflow-hidden">
@@ -138,27 +138,16 @@ const Home1 = () => {
               className={`text-[#3787ff] block text-right transition-all duration-700 transform
                 ${titleVisibility.line3 ? 'translate-x-0 opacity-100' : 'translate-x-[-50px] opacity-0'}`}
             >
-              ABYSS
+              {getTranslation(503)}
             </span>
           </div>
         </div>
 
-        <div className="text-[#95a5f2] font-light text-[17px] leading-[11px] float-right ">
-          The Pain Holding You Back
+        <div className={`text-[#95a5f2] font-light text-[17px] leading-[11px] float-right ${language === 'english' ? '' : 'mt-[10px]'}`}>
+          {getTranslation(6)}
         </div>
-        <div className="text-[#cfd5f6] text-[11px] leading-[11px] font-extralight mt-[41px] absolute right-[11px]">
-          <p className=" text-right  text-nowrap">
-            Loneliness and depression haunt millions,
-          </p>
-          <p className=" text-right  text-nowrap">
-            hitting you—young adults—hardest. Cold AI
-          </p>
-          <p className="  text-right  text-nowrap">
-            steals your words, gives no comfort. Your heart
-          </p>
-          <p className=" text-right  text-nowrap">
-            needs more—ME AI heals.
-          </p>
+        <div className={`text-[#cfd5f6] text-[11px] text-right leading-[11px] font-extralight mt-[41px] absolute right-[11px] ${language === 'english' ? 'w-[100%]' : 'w-[120%]'}`}>
+          {getTranslation(7)}
         </div>
       </div>
     </div>
