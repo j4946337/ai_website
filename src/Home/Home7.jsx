@@ -79,7 +79,7 @@ const Home7 = () => {
           className={`mt-[21px] text-center transition-all duration-[1200ms] ${isAmountVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[30px]'}`}
         >
           <span className="text-[#ffffff] text-[28px] leading-[28px] font-semibold">1,000,000,000</span>
-          <span className="text-[#ff6b4c] text-[11px] leading-[11px] pl-[2%]">ME</span>
+          <span className="text-[#ff6b4c] text-[11px] leading-[11px] pl-[2%]">VIB</span>
         </div>
       </div>
       <div
