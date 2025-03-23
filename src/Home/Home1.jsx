@@ -146,7 +146,7 @@ const Home1 = () => {
         <div className={`text-[#95a5f2] font-light text-[17px] leading-[11px] float-right ${language === 'english' ? '' : 'mt-[10px]'}`}>
           {getTranslation(6)}
         </div>
-        <div className={`text-[#cfd5f6] text-[11px] text-right leading-[11px] font-extralight mt-[41px] absolute right-[11px] ${language === 'english' ? 'w-[100%]' : 'w-[120%]'}`}>
+        <div className={`text-[#cfd5f6] text-[11px] text-right ${language === 'english' ? 'leading-[11px] ' : 'leading-[13px] '} font-extralight mt-[41px] absolute right-[11px] ${language === 'english' ? 'w-[100%]' : 'w-[120%]'}`}>
           {getTranslation(7)}
         </div>
       </div>
