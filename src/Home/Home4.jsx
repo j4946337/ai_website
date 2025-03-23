@@ -165,25 +165,25 @@ const Home4 = () => {
             ref={section1Ref}
             className={`flex flex-col ml-[35px] transition-all duration-[1000ms] ${isSection1Visible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-[20px]'}`}
           >
-            <p className="font-semibold text-[#ffffff] text-[20px] leading-[20px]">{getTranslation(30)}</p>
-            <p className="text-[#ff6b4c] text-[15px] leading-[15px]">{getTranslation(31)}</p>
-            <p className="text-[#cdcdcd] text-[12px] font-light w-[241px] leading-[12px]">{getTranslation(32)}</p>
+            <p className={`font-semibold text-[#ffffff] text-[20px] ${language === 'english' ? 'leading-[20px]' : 'leading-[24px]'}`}>{getTranslation(30)}</p>
+            <p className={`text-[#ff6b4c] text-[15px] ${language === 'english' ? 'leading-[15px]' : 'leading-[19px]'}`}>{getTranslation(31)}</p>
+            <p className={`text-[#cdcdcd] text-[12px] font-light w-[241px] ${language === 'english' ? 'leading-[12px]' : 'leading-[14px]'}`}>{getTranslation(32)}</p>
           </div>
           <div
             ref={section2Ref}
             className={`flex flex-col ml-[35px] transition-all duration-[1000ms] ${isSection2Visible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-[20px]'}`}
           >
-            <p className="font-semibold text-[#ffffff] text-[20px] leading-[20px]">{getTranslation(33)}</p>
-            <p className="text-[#ff6b4c] text-[15px] leading-[15px]">{getTranslation(34)}</p>
-            <p className="text-[#cdcdcd] text-[12px] font-light w-[245px] leading-[12px]">{getTranslation(35)}</p>
+            <p className={`font-semibold text-[#ffffff] text-[20px] ${language === 'english' ? 'leading-[20px]' : 'leading-[24px]'}`}>{getTranslation(33)}</p>
+            <p className={`text-[#ff6b4c] text-[15px] ${language === 'english' ? 'leading-[15px]' : 'leading-[19px]'}`}>{getTranslation(34)}</p>
+            <p className={`text-[#cdcdcd] text-[12px] font-light w-[245px] ${language === 'english' ? 'leading-[12px]' : 'leading-[14px]'}`}>{getTranslation(35)}</p>
           </div>
           <div
             ref={section3Ref}
             className={`flex flex-col ml-[35px] transition-all duration-[1000ms] ${isSection3Visible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-[20px]'}`}
           >
-            <p className="font-semibold text-[#ffffff] text-[20px] leading-[20px]">{getTranslation(36)}</p>
-            <p className="text-[#ff6b4c] text-[15px] leading-[15px]">{getTranslation(37)}</p>
-            <p className="text-[#cdcdcd] text-[12px] font-light w-[244px] leading-[12px]">{getTranslation(38)}</p>
+            <p className={`font-semibold text-[#ffffff] text-[20px] ${language === 'english' ? 'leading-[20px]' : 'leading-[24px]'}`}>{getTranslation(36)}</p>
+            <p className={`text-[#ff6b4c] text-[15px] ${language === 'english' ? 'leading-[15px]' : 'leading-[19px]'}`}>{getTranslation(37)}</p>
+            <p className={`text-[#cdcdcd] text-[12px] font-light w-[244px] ${language === 'english' ? 'leading-[12px]' : 'leading-[14px]'}`}>{getTranslation(38)}</p>
           </div>
         </div>
       </div>
