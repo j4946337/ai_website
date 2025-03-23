@@ -68,7 +68,7 @@ const Home8 = () => {
         className={`flex flex-col items-center ${isTitleVisible ? '' : ''}`}
       >
         <div
-          className={`text-[#ffffff] text-[34px] leading-[34px] font-semibold text-left transition-all duration-[1200ms] ${isTitleVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[50px]'}`}
+          className={`text-[#ffffff] text-[34px] ${language === 'english' ? 'leading-[34px]' : 'leading-[40px]'} font-semibold text-left transition-all duration-[1200ms] ${isTitleVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[50px]'}`}
         >
           {getTranslation(74)} {/* ROADMAP */}
         </div>
@@ -115,7 +115,7 @@ const Home8 = () => {
           />
           <div className={`flex flex-col transition-opacity duration-[1000ms] ${isPhase1Visible ? "opacity-100" : "opacity-0"}`}>
             <p className='text-[#fff] text-[12px] leading-[12px] font-semibold'>{getTranslation(77)}</p> {/* Q2 2025 H5 Beta */}
-            <p className='text-[#cdcdcd] text-[11px] leading-[11px] font-light mt-[8px] w-[154px]'>{getTranslation(78)}</p> {/* Your H5 prototype launches—customize your AI, earn ME tokens, and shape our companion with your community's input. */}
+            <p className={`text-[#cdcdcd] text-[11px] ${language === 'english' ? 'leading-[11px]' : 'leading-[13px]'} font-light mt-[8px] w-[154px]`}>{getTranslation(78)}</p> {/* Your H5 prototype launches—customize your AI, earn ME tokens, and shape our companion with your community's input. */}
           </div>
         </div>
         <div
@@ -154,7 +154,7 @@ const Home8 = () => {
           />
           <div className={`flex flex-col transition-opacity duration-[1000ms] ${isPhase2Visible ? "opacity-100" : "opacity-0"}`}>
             <p className='text-[#fff] text-[12px] leading-[12px] font-semibold'>{getTranslation(79)}</p> {/* Q3 2025 On-Chain & App */}
-            <p className='text-[#cdcdcd] text-[11px] leading-[11px] font-light mt-[8px] w-[156px]'>{getTranslation(80)}</p> {/* Your chats power an on-chain LLM, NFTs launch, and an app connects you—your community builds a bias-free ally. */}
+            <p className={`text-[#cdcdcd] text-[11px] ${language === 'english' ? 'leading-[11px]' : 'leading-[13px]'} font-light mt-[8px] w-[156px]`}>{getTranslation(80)}</p> {/* Your chats power an on-chain LLM, NFTs launch, and an app connects you—your community builds a bias-free ally. */}
           </div>
         </div>
         <div
@@ -193,7 +193,7 @@ const Home8 = () => {
           />
           <div className={`flex flex-col transition-opacity duration-[1000ms] ${isPhase3Visible ? "opacity-100" : "opacity-0"}`}>
             <p className='text-[#fff] text-[12px] leading-[12px] font-semibold'>{getTranslation(81)}</p> {/* Q2 2026 Metaverse & Celeb Voices */}
-            <p className='text-[#cdcdcd] text-[11px] leading-[11px] font-light mt-[8px] w-[156px]'>{getTranslation(82)}</p> {/* Your Virtual City opens—AR, metaverse, and celebrity voices join, crafted with your community, boosting your bond. */}
+            <p className={`text-[#cdcdcd] text-[11px] ${language === 'english' ? 'leading-[11px]' : 'leading-[13px]'} font-light mt-[8px] w-[156px]`}>{getTranslation(82)}</p> {/* Your Virtual City opens—AR, metaverse, and celebrity voices join, crafted with your community, boosting your bond. */}
           </div>
         </div>
         <div
@@ -232,7 +232,7 @@ const Home8 = () => {
           />
           <div className={`flex flex-col transition-opacity duration-[1000ms] ${isPhase4Visible ? "opacity-100" : "opacity-0"}`}>
             <p className='text-[#fff] text-[12px] leading-[12px] font-semibold'>{getTranslation(83)}</p> {/* Q4 2027 Modes & 1M Users */}
-            <p className='text-[#cdcdcd] text-[11px] leading-[11px] font-light mt-[8px] w-[157px]'>{getTranslation(84)}</p> {/* Your AI adds Calm, Inspire, Connect modes—your DAO scales us to 1M users on TikTok, Twitch, healing your world. */}
+            <p className={`text-[#cdcdcd] text-[11px] ${language === 'english' ? 'leading-[11px]' : 'leading-[13px]'} font-light mt-[8px] w-[157px]`}>{getTranslation(84)}</p> {/* Your AI adds Calm, Inspire, Connect modes—your DAO scales us to 1M users on TikTok, Twitch, healing your world. */}
           </div>
         </div>
       </div>
