@@ -141,7 +141,7 @@ const Home5_1 = () => {
 
         <div
           ref={descriptionRef}
-          className={`text-[#cdcdcd] text-[11px] w-[225px] leading-[11px] font-light mx-auto transition-opacity duration-[4000ms] ${isDescriptionVisible ? 'opacity-100' : 'opacity-0'}`}
+          className={`text-[#cdcdcd] text-[11px] w-[225px] ${language === 'english' ? 'leading-[11px]' : 'leading-[15px]'} font-light mx-auto transition-opacity duration-[4000ms] ${isDescriptionVisible ? 'opacity-100' : 'opacity-0'}`}
         >
           {getTranslation(52)} {/* Shape your AI companion... */}
         </div>
