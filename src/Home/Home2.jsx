@@ -144,7 +144,7 @@ const Home2 = () => {
           ref={descriptionRef}
           className={`w-[253px] mt-[59px] transition-opacity duration-[4000ms] ${isDescriptionVisible ? 'opacity-100' : 'opacity-0'}`}
         >
-          <p className='text-[11px] leading-[11px] text-[#cfd5f6] font-extralight'>{getTranslation(12)}</p>
+          <p className={`text-[11px] ${language === 'english' ? 'leading-[11px]' : 'leading-[13px]'} text-[#cfd5f6] font-extralight`}>{getTranslation(12)}</p>
         </div>
       </div>
     </div>
