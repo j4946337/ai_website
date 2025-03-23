@@ -104,8 +104,8 @@ const Home7 = () => {
         >
           <div className='w-[14px] h-[14px] bg-[#ab1fae] rounded-[4px]'></div>
           <div className='flex flex-col'>
-            <span className='text-[#ffffff] text-[13px] leading-[13px] font-semibold'>{getTranslation(69)}</span>
-            <span className='text-[#ffffff] text-[11px] leading-[11px] font-light'>{getTranslation(70)}</span>
+            <span className={`text-[#ffffff] text-[13px] ${language === 'english' ? 'leading-[13px]' : 'leading-[16px]'} font-semibold`}>{getTranslation(69)}</span>
+            <span className={`text-[#ffffff] text-[11px] ${language === 'english' ? 'leading-[11px]' : 'leading-[13px]'} font-light`}>{getTranslation(70)}</span>
           </div>
         </div>
         <div
@@ -114,8 +114,8 @@ const Home7 = () => {
         >
           <div className='w-[14px] h-[14px] bg-[#e77b2f] rounded-[4px]'></div>
           <div className='flex flex-col'>
-            <span className='text-[#ffffff] text-[13px] leading-[13px] font-semibold'>{getTranslation(71)}</span>
-            <span className='text-[#ffffff] text-[11px] leading-[11px] font-light'>{getTranslation(72)}</span>
+            <span className={`text-[#ffffff] text-[13px] ${language === 'english' ? 'leading-[13px]' : 'leading-[16px]'} font-semibold`}>{getTranslation(71)}</span>
+            <span className={`text-[#ffffff] text-[11px] ${language === 'english' ? 'leading-[11px]' : 'leading-[13px]'} font-light`}>{getTranslation(72)}</span>
           </div>
         </div>
         <div
@@ -124,8 +124,8 @@ const Home7 = () => {
         >
           <div className='w-[14px] h-[14px] bg-[#a1a1a2] rounded-[4px]'></div>
           <div className='flex flex-col'>
-            <span className='text-[#ffffff] text-[13px] leading-[13px] font-semibold'>{getTranslation(63)}</span>
-            <span className='text-[#ffffff] text-[11px] leading-[11px] font-light'>{getTranslation(64)}</span>
+            <span className={`text-[#ffffff] text-[13px] ${language === 'english' ? 'leading-[13px]' : 'leading-[16px]'} font-semibold`}>{getTranslation(63)}</span>
+            <span className={`text-[#ffffff] text-[11px] ${language === 'english' ? 'leading-[11px]' : 'leading-[13px]'} font-light`}>{getTranslation(64)}</span>
           </div>
         </div>
         <div
@@ -134,8 +134,8 @@ const Home7 = () => {
         >
           <div className='w-[14px] h-[14px] bg-[#f9bb00] rounded-[4px]'></div>
           <div className='flex flex-col'>
-            <span className='text-[#ffffff] text-[13px] leading-[13px] font-semibold'>{getTranslation(65)}</span>
-            <span className='text-[#ffffff] text-[11px] leading-[11px] font-light'>{getTranslation(66)}</span>
+            <span className={`text-[#ffffff] text-[13px] ${language === 'english' ? 'leading-[13px]' : 'leading-[16px]'} font-semibold`}>{getTranslation(65)}</span>
+            <span className={`text-[#ffffff] text-[11px] ${language === 'english' ? 'leading-[11px]' : 'leading-[13px]'} font-light`}>{getTranslation(66)}</span>
           </div>
         </div>
         <div
@@ -144,8 +144,8 @@ const Home7 = () => {
         >
           <div className='w-[14px] h-[14px] bg-[#6daa45] rounded-[4px]'></div>
           <div className='flex flex-col'>
-            <span className='text-[#ffffff] text-[13px] leading-[13px] font-semibold'>{getTranslation(67)}</span>
-            <span className='text-[#ffffff] text-[11px] leading-[11px] font-light'>{getTranslation(68)}</span>
+            <span className={`text-[#ffffff] text-[13px] ${language === 'english' ? 'leading-[13px]' : 'leading-[16px]'} font-semibold`}>{getTranslation(67)}</span>
+            <span className={`text-[#ffffff] text-[11px] ${language === 'english' ? 'leading-[11px]' : 'leading-[13px]'} font-light`}>{getTranslation(68)}</span>
           </div>
         </div>
       </div>
