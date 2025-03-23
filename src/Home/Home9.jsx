@@ -61,12 +61,12 @@ const Home9 = () => {
       className={`flex flex-col items-center ${isTitleVisible ? '' : ''}`}
     >
       <div
-        className={`text-[#ffffff] text-[40px] leading-[40px] w-[77%] font-semibold text-center transition-all duration-[1200ms] ${isTitleVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[50px]'}`}
+        className={`text-[#ffffff] text-[40px] ${language === 'english' ? 'leading-[40px]' : 'leading-[44px]'} w-[77%] font-semibold text-center transition-all duration-[1200ms] ${isTitleVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[50px]'}`}
       >
         {getTranslation(85)} {/* MEET THE VIBELY TEAM */}
       </div>
       <div
-        className={`text-[#cdcdcd] text-[10px] leading-[10px] w-[77%] font-light text-left mx-auto transition-opacity duration-[4000ms] ${isTitleVisible ? 'opacity-100' : 'opacity-0'}`}
+        className={`text-[#cdcdcd] text-[10px] ${language === 'english' ? 'leading-[10px]' : 'leading-[12px]'} w-[77%] font-light text-left mx-auto transition-opacity duration-[4000ms] ${isTitleVisible ? 'opacity-100' : 'opacity-0'}`}
       >
         {getTranslation(86)} {/* Meet the dedicated professionals... */}
       </div>
