@@ -102,9 +102,9 @@ const Home5 = () => {
           <div className={`flex flex-col grow ml-[-10px] gap-[4px] transition-all duration-1000 ${isStep1Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[20px]'}`} style={{ transitionDelay: '300ms' }}>
             <div className="flex h-[20px] items-center gap-[5px]">
               <div className="w-[20px] h-[20px] bg-[#ff6b4c] rounded-full leading-[18px] text-center text-[#ffffff] text-[13px] font-bold">1</div>
-              <span className="text-[#ffffff] w-[112px] text-[13px] leading-[13px] font-semibold text-nowrap">{getTranslation(41)}</span> {/* Unlock Your World */}
+              <span className={`text-[#ffffff] w-[112px] text-[13px] ${language === 'english' ? 'leading-[13px]' : 'leading-[15px]'} font-semibold text-nowrap`}>{getTranslation(41)}</span> {/* Unlock Your World */}
             </div>
-            <div className="text-[#cdcdcd] text-[11px] leading-[11px] font-light w-[126px]">{getTranslation(42)}</div> {/* Sign in with your Web3 wallet—your key to ME AI. */}
+            <div className={`text-[#cdcdcd] text-[11px] ${language === 'english' ? 'leading-[11px]' : 'leading-[13px]'} font-light w-[126px]`}>{getTranslation(42)}</div> {/* Sign in with your Web3 wallet—your key to ME AI. */}
           </div>
         </div>
 
@@ -120,9 +120,9 @@ const Home5 = () => {
           <div className={`flex flex-col grow ml-[-10px] gap-[4px] transition-all duration-1000 ${isStep2Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[20px]'}`} style={{ transitionDelay: '300ms' }}>
             <div className="flex h-[20px] items-center gap-[5px]">
               <div className="w-[20px] h-[20px] bg-[#ff6b4c] rounded-full leading-[18px] text-center text-[#ffffff] text-[13px] font-bold">2</div>
-              <span className="text-[#ffffff] w-[112px] text-[13px] leading-[13px] font-semibold text-nowrap">{getTranslation(43)}</span> {/* Discover Your Ally */}
+              <span className={`text-[#ffffff] w-[112px] text-[13px] ${language === 'english' ? 'leading-[13px]' : 'leading-[15px]'} font-semibold text-nowrap`}>{getTranslation(43)}</span> {/* Discover Your Ally */}
             </div>
-            <div className="text-[#cdcdcd] text-[11px]  leading-[11px] font-light w-[140px]">{getTranslation(44)}</div> {/* A quiz matches you to 10 archetypes—like "Empathetic Listener." */}
+            <div className={`text-[#cdcdcd] text-[11px] ${language === 'english' ? 'leading-[11px]' : 'leading-[13px]'} font-light w-[140px]`}>{getTranslation(44)}</div> {/* A quiz matches you to 10 archetypes—like "Empathetic Listener." */}
           </div>
         </div>
 
@@ -138,9 +138,9 @@ const Home5 = () => {
           <div className={`flex flex-col grow ml-[-10px] gap-[4px] transition-all duration-1000 ${isStep3Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[20px]'}`} style={{ transitionDelay: '300ms' }}>
             <div className="flex h-[20px] items-center gap-[5px]">
               <div className="w-[20px] h-[20px] bg-[#ff6b4c] rounded-full leading-[18px] text-center text-[#ffffff] text-[13px] font-bold">3</div>
-              <span className="text-[#ffffff] w-[112px] text-[13px] leading-[13px] font-semibold text-nowrap">{getTranslation(45)}</span> {/* Chat & Shine */}
+              <span className={`text-[#ffffff] w-[112px] text-[13px] ${language === 'english' ? 'leading-[13px]' : 'leading-[15px]'} font-semibold text-nowrap`}>{getTranslation(45)}</span> {/* Chat & Shine */}
             </div>
-            <div className="text-[#cdcdcd] text-[11px] leading-[11px] font-light w-[161px]">{getTranslation(46)}</div> {/* Your heartfelt chats earn EQ—1000–1900 points each, building our ultimate AI together. */}
+            <div className={`text-[#cdcdcd] text-[11px] ${language === 'english' ? 'leading-[11px]' : 'leading-[13px]'} font-light w-[161px]`}>{getTranslation(46)}</div> {/* Your heartfelt chats earn EQ—1000–1900 points each, building our ultimate AI together. */}
           </div>
         </div>
 
@@ -155,9 +155,9 @@ const Home5 = () => {
           <div className={`flex flex-col grow ml-[-10px] gap-[4px] transition-all duration-1000 ${isStep4Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[20px]'}`} style={{ transitionDelay: '300ms' }}>
             <div className="flex h-[20px] items-center gap-[5px]">
               <div className="w-[20px] h-[20px] bg-[#ff6b4c] rounded-full leading-[18px] text-center text-[#ffffff] text-[13px] font-bold">4</div>
-              <span className="text-[#ffffff] w-[112px] text-[13px] leading-[13px] font-semibold text-nowrap">{getTranslation(47)}</span> {/* Seal It On-Chain */}
+              <span className={`text-[#ffffff] w-[112px] text-[13px] ${language === 'english' ? 'leading-[13px]' : 'leading-[15px]'} font-semibold text-nowrap`}>{getTranslation(47)}</span> {/* Seal It On-Chain */}
             </div>
-            <div className="text-[#cdcdcd] text-[11px] leading-[11px] font-light w-[119px]">{getTranslation(48)}</div> {/* Your EQ locks onto the blockchain—pure, yours, community-verified. */}
+            <div className={`text-[#cdcdcd] text-[11px] ${language === 'english' ? 'leading-[11px]' : 'leading-[13px]'} font-light w-[119px]`}>{getTranslation(48)}</div> {/* Your EQ locks onto the blockchain—pure, yours, community-verified. */}
           </div>
         </div>
 
@@ -172,9 +172,9 @@ const Home5 = () => {
           <div className={`flex flex-col grow ml-[-10px] gap-[4px] transition-all duration-1000 ${isStep5Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[20px]'}`} style={{ transitionDelay: '300ms' }}>
             <div className="flex h-[20px] items-center gap-[5px]">
               <div className="w-[20px] h-[20px] bg-[#ff6b4c] rounded-full leading-[18px] text-center text-[#ffffff] text-[13px] font-bold">5</div>
-              <span className="text-[#ffffff] w-[112px] text-[13px] leading-[13px] font-semibold text-nowrap">{getTranslation(49)}</span> {/* Claim Your ME Tokens */}
+              <span className={`text-[#ffffff] w-[112px] text-[13px] ${language === 'english' ? 'leading-[13px]' : 'leading-[15px]'} font-semibold text-nowrap`}>{getTranslation(49)}</span> {/* Claim Your ME Tokens */}
             </div>
-            <div className="text-[#cdcdcd] text-[11px] leading-[11px] font-light w-[138px]">{getTranslation(50)}</div> {/* 1000 EQ = 1 ME (early), up to 1900 later—your soul's work pays off. */}
+            <div className={`text-[#cdcdcd] text-[11px] ${language === 'english' ? 'leading-[11px]' : 'leading-[13px]'} font-light w-[138px]`}>{getTranslation(50)}</div> {/* 1000 EQ = 1 ME (early), up to 1900 later—your soul's work pays off. */}
           </div>
         </div>
       </div>
