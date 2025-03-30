@@ -1,0 +1,487 @@
+[
+  {
+    "id": 1,
+    "english": "Litepaper",
+    "t_chinese": "白皮書"
+  },
+  {
+    "id": 2,
+    "english": "Welcome to",
+    "t_chinese": "歡迎來到"
+  },
+  {
+    "id": 3,
+    "english": "Your emotions need a friend. Vibely is your safe space—an AI that listens, learns, and pays you in VIB tokens. Your journey starts now.",
+    "t_chinese": "您的情緒需要一個朋友。Vibely 是您的安全空間——一個傾聽、學習並以 VIB 代幣獎勵您的人工智慧。您的旅程從現在開始。"
+  },
+  {
+    "id": 4,
+    "english": "Chat Now",
+    "t_chinese": "傾訴心聲"
+  },
+  {
+    "id": 5,
+    "english": "THE EMOTIONAL ABYSS",
+    "t_chinese": "情感深淵"
+  },
+  {
+    "id": 6,
+    "english": "The Pain Holding You Back",
+    "t_chinese": "阻礙你的痛苦"
+  },
+  {
+    "id": 7,
+    "english": "Loneliness and depression haunt millions, hitting you—young adults—hardest. Cold AI steals your words, gives no comfort. Your heart needs more—Vibely heals.",
+    "t_chinese": "孤獨與憂鬱困擾著數百萬人，而年輕人受影響最深。冰冷的AI偷走你的話語，卻無法給予安慰。你的心需要更多——Vibely 來療癒。"
+  },
+  {
+    "id": 8,
+    "english": "UNVEILED",
+    "t_chinese": "揭曉"
+  },
+  {
+    "id": 9,
+    "english": "COMPANION",
+    "t_chinese": "伴侶"
+  },
+  {
+    "id": 10,
+    "english": "RULES",
+    "t_chinese": "規則"
+  },
+  {
+    "id": 11,
+    "english": "REWARDS",
+    "t_chinese": "獎勵"
+  },
+  {
+    "id": 12,
+    "english": "Vibely fights for you—a decentralized space where you and your community build the best AI companion on a blockchain LLM. Train-to-Earn gives you VIB tokens as you shape your friend across different types (e.g., “Creative Dreamer”), easing your loneliness with a caring, fair partner.",
+    "t_chinese": "Vibely 為你而戰——這是一個去中心化的空間，你和你的社區可以在區塊鏈LLM上打造最好的AI伴侶。通過訓練即賺取機制，你可以在塑造不同類型的伴侶（例如創意夢想家）時獲得VIB代幣，並與一個關心你、公平的夥伴一起緩解孤獨。"
+  },
+  {
+    "id": 13,
+    "english": "THE CHAINS OF CURRENT AI",
+    "t_chinese": "當前AI的枷鎖"
+  },
+  {
+    "id": 14,
+    "english": "Why AI Lets You Down",
+    "t_chinese": "為什麼AI讓你失望"
+  },
+  {
+    "id": 15,
+    "english": "Data Theft",
+    "t_chinese": "數據盜竊"
+  },
+  {
+    "id": 16,
+    "english": "Big tech takes your chats, pays you nothing.",
+    "t_chinese": "大型科技公司拿走你的聊天記錄，卻不給你任何回報。"
+  },
+  {
+    "id": 17,
+    "english": "Empty Effort",
+    "t_chinese": "空洞的努力"
+  },
+  {
+    "id": 18,
+    "english": "Their rules silence your voice.",
+    "t_chinese": "他們的規則壓制了你的聲音。"
+  },
+  {
+    "id": 19,
+    "english": "Biased Shadow",
+    "t_chinese": "偏見的陰影"
+  },
+  {
+    "id": 20,
+    "english": "Your trust fades—Vibely frees you.",
+    "t_chinese": "你的信任逐漸消失——Vibely 讓你自由。"
+  },
+  {
+    "id": 21,
+    "english": "YOUR LIBERATION",
+    "t_chinese": "你的解放"
+  },
+  {
+    "id": 22,
+    "english": "Vibely",
+    "t_chinese": "Vibely"
+  },
+  {
+    "id": 23,
+    "english": "Your Freedom",
+    "t_chinese": "你的自由"
+  },
+  {
+    "id": 24,
+    "english": "Own Your Friend",
+    "t_chinese": "擁有你的朋友"
+  },
+  {
+    "id": 25,
+    "english": "Build your AI—text, voice—an NFT to take anywhere, shaped with your community.",
+    "t_chinese": "打造你的AI——文字、聲音——一個可以帶到任何地方的NFT，與你的社區共同塑造。"
+  },
+  {
+    "id": 26,
+    "english": "Power Yourself",
+    "t_chinese": "賦能自己"
+  },
+  {
+    "id": 27,
+    "english": "Your chats fuel a fair LLM—safe, yours, built together.",
+    "t_chinese": "你的聊天記錄推動一個公平的LLM——安全、屬於你，並由大家共同打造。"
+  },
+  {
+    "id": 28,
+    "english": "Earn Rewards",
+    "t_chinese": "賺取獎勵"
+  },
+  {
+    "id": 29,
+    "english": "Your chats score EQ, earning VIB tokens—your heart matters.",
+    "t_chinese": "你的聊天記錄會獲得EQ評分，賺取VIB代幣——你的心聲很重要。"
+  },
+  {
+    "id": 30,
+    "english": "Craft Your Ally",
+    "t_chinese": "打造你的盟友"
+  },
+  {
+    "id": 31,
+    "english": "Make It Yours",
+    "t_chinese": "讓它屬於你"
+  },
+  {
+    "id": 32,
+    "english": "Shape your AI—voice, look, tone—across different types (e.g., “Creative Dreamer”). It soothes your loneliness, built by the community.",
+    "t_chinese": "塑造你的AI——聲音、外觀、語氣——涵蓋不同類型（例如創意夢想家）。它由社區打造，緩解你的孤獨。"
+  },
+  {
+    "id": 33,
+    "english": "Grow Your EQ",
+    "t_chinese": "提升你的EQ"
+  },
+  {
+    "id": 34,
+    "english": "Feel the Growth",
+    "t_chinese": "感受成長"
+  },
+  {
+    "id": 35,
+    "english": "Your EQ (0–2000) scores your chats—depth, truth, you. As it rises, your AI levels up (1–100), unlocking fun perks—your best friend grows with us.",
+    "t_chinese": "你的EQ（0–2000）為你的聊天評分——深度、真實、你。隨著EQ提升，你的AI也會升級（1–100），解鎖有趣的獎勵——你最好的朋友與我們一起成長。"
+  },
+  {
+    "id": 36,
+    "english": "Play Your Way",
+    "t_chinese": "以你的方式玩樂"
+  },
+  {
+    "id": 37,
+    "english": "Have Fun, Feel More",
+    "t_chinese": "玩得開心，感受更多"
+  },
+  {
+    "id": 38,
+    "english": "Dialogue Duels: Weekly 10-minute chats score your AI’s EQ—3 tries a day earn you VIB tokens and leaderboard spots. Your fun chats brighten your day with us.",
+    "t_chinese": "對話對決：每週10分鐘的聊天會為你的AI的EQ評分——每天3次嘗試可賺取VIB代幣並登上排行榜。你的有趣聊天讓我們的日子更美好。"
+  },
+  {
+    "id": 39,
+    "english": "YOUR JOURNEY, STEP-BY-STEP",
+    "t_chinese": "你的旅程，一步一步"
+  },
+  {
+    "id": 40,
+    "english": "How You Earn Your VIB Tokens?",
+    "t_chinese": "你如何賺取VIB代幣？"
+  },
+  {
+    "id": 41,
+    "english": "Unlock Your World",
+    "t_chinese": "解鎖你的世界"
+  },
+  {
+    "id": 42,
+    "english": "Sign in with your Web3 wallet—your key to Vibely.",
+    "t_chinese": "使用你的Web3錢包登錄——這是進入Vibely的鑰匙。"
+  },
+  {
+    "id": 43,
+    "english": "Discover Your Ally",
+    "t_chinese": "發現你的盟友"
+  },
+  {
+    "id": 44,
+    "english": "A quiz matches you to 10 archetypes—like “Empathetic Listener.”",
+    "t_chinese": "一個測驗將你匹配到10種原型——例如同理心傾聽者。"
+  },
+  {
+    "id": 45,
+    "english": "Chat & Shine",
+    "t_chinese": "聊天並閃耀"
+  },
+  {
+    "id": 46,
+    "english": "Your heartfelt chats earn EQ—1000–1900 points each, building our ultimate AI together.",
+    "t_chinese": "你真摯的聊天會賺取EQ——每次1000–1900分，與我們一起打造終極AI。"
+  },
+  {
+    "id": 47,
+    "english": "Seal It On-Chain",
+    "t_chinese": "在鏈上封存"
+  },
+  {
+    "id": 48,
+    "english": "Your EQ locks onto the blockchain—pure, yours, community-verified.",
+    "t_chinese": "你的EQ被鎖定在區塊鏈上——純粹、屬於你，並由社區驗證。"
+  },
+  {
+    "id": 49,
+    "english": "Claim Your VIB Tokens",
+    "t_chinese": "領取你的VIB代幣"
+  },
+  {
+    "id": 50,
+    "english": "1000 EQ = 1 VIB (early), up to 1900 later—your soul’s work pays off.",
+    "t_chinese": "1000 EQ = 1 VIB（早期），後期可達1900——你的心血得到了回報。"
+  },
+  {
+    "id": 5101,
+    "english": "CHAT WITH ",
+    "t_chinese": "隨時"
+  },
+  {
+    "id": 5102,
+    "english": "YOUR AI",
+    "t_chinese": "隨地"
+  },
+  {
+    "id": 5103,
+    "english": "Anytime ",
+    "t_chinese": "與你的"
+  },
+  {
+    "id": 5104,
+    "english": "Anywhere",
+    "t_chinese": "AI聊天"
+  },
+  {
+    "id": 52,
+    "english": "Shape your AI companion—choose your style, voice, and personality (e.g., “Empathetic Listener”)—and chat to ease your loneliness. Your talks earn VIB tokens via Train-to-Earn, growing your emotional ally with the community’s support, all on your device!",
+    "t_chinese": "塑造你的AI伴侶——選擇你的風格、聲音和個性（例如同理心傾聽者）——並通過聊天緩解孤獨。你的對話通過訓練即賺取機制賺取VIB代幣，在社區的支持下，讓你的情感盟友在你的設備上成長！"
+  },
+  {
+    "id": 53,
+    "english": "YOUR TECH EDGE",
+    "t_chinese": "你的技術優勢"
+  },
+  {
+    "id": 54,
+    "english": "Powering Your Emotional Future",
+    "t_chinese": "為你的情感未來賦能"
+  },
+  {
+    "id": 55,
+    "english": "On-Chain LLM",
+    "t_chinese": "鏈上LLM"
+  },
+  {
+    "id": 56,
+    "english": "Your encrypted chats (IPFS/Filecoin) train a bias-free brain—spam-proof with smart parsing.",
+    "t_chinese": "你的加密聊天記錄（IPFS/Filecoin）訓練出一個無偏見的大腦——通過智能解析防止垃圾信息。"
+  },
+  {
+    "id": 57,
+    "english": "Federated Learning",
+    "t_chinese": "聯邦學習"
+  },
+  {
+    "id": 58,
+    "english": "Your device (phone or NVIDIA desktop) crafts your AI locally.",
+    "t_chinese": "你的設備（手機或NVIDIA桌面）在本地打造你的AI。"
+  },
+  {
+    "id": 59,
+    "english": "MCP & OpenAPI",
+    "t_chinese": "MCP與OpenAPI"
+  },
+  {
+    "id": 60,
+    "english": "Your companion roams free—limitless, yours.",
+    "t_chinese": "你的伴侶自由漫遊——無限，屬於你。"
+  },
+  {
+    "id": 61,
+    "english": "TOKENOMICS",
+    "t_chinese": "代幣經濟"
+  },
+  {
+    "id": 62,
+    "english": "Built for You",
+    "t_chinese": "為你打造"
+  },
+  {
+    "id": 63,
+    "english": "10%/100M Investors",
+    "t_chinese": "10%/1億 投資者"
+  },
+  {
+    "id": 64,
+    "english": "Grows your reach.",
+    "t_chinese": "擴大你的影響力。"
+  },
+  {
+    "id": 65,
+    "english": "10%/100M Marketing",
+    "t_chinese": "10%/1億 市場推廣"
+  },
+  {
+    "id": 66,
+    "english": "Amplifies your voice.",
+    "t_chinese": "放大你的聲音。"
+  },
+  {
+    "id": 67,
+    "english": "9%/90M Staking",
+    "t_chinese": "9%/9000萬 質押"
+  },
+  {
+    "id": 68,
+    "english": "Rewards your stake.",
+    "t_chinese": "獎勵你的質押。"
+  },
+  {
+    "id": 69,
+    "english": "51%/510M EQ Farming",
+    "t_chinese": "51%/5.1億 EQ耕作"
+  },
+  {
+    "id": 70,
+    "english": "You earn for your heartfelt chats.",
+    "t_chinese": "你因真摯的聊天而賺取。"
+  },
+  {
+    "id": 71,
+    "english": "20%/200M Team",
+    "t_chinese": "20%/2億 團隊"
+  },
+  {
+    "id": 72,
+    "english": "Fuels your vision.",
+    "t_chinese": "為你的願景提供動力。"
+  },
+  {
+    "id": 73,
+    "english": "Fair launch, no pre-mine—your wealth, your way",
+    "t_chinese": "公平啟動，無預挖——你的財富，你的方式"
+  },
+  {
+    "id": 74,
+    "english": "ROADMAP",
+    "t_chinese": "路線圖"
+  },
+  {
+    "id": 75,
+    "english": "From Your First Chat to Global Impact",
+    "t_chinese": "從你的第一次聊天到全球影響"
+  },
+  {
+    "id": 76,
+    "english": "Phase",
+    "t_chinese": "階段"
+  },
+  {
+    "id": 77,
+    "english": "Q2 2025 H5 Beta",
+    "t_chinese": "2025年第二季度 H5測試版"
+  },
+  {
+    "id": 78,
+    "english": "Your H5 prototype launches—customize your AI, earn VIB tokens, and shape our companion with your community’s input.",
+    "t_chinese": "你的H5原型上線——定制你的AI，賺取VIB代幣，並根據社區的意見塑造我們的伴侶。"
+  },
+  {
+    "id": 79,
+    "english": "Q3 2025 On-Chain & App",
+    "t_chinese": "2025年第三季度 鏈上與應用"
+  },
+  {
+    "id": 80,
+    "english": "Your chats power an on-chain LLM, NFTs launch, and an app connects you—your community builds a bias-free ally.",
+    "t_chinese": "你的聊天記錄推動鏈上LLM，NFT上線，並通過應用連接你——你的社區打造一個無偏見的盟友。"
+  },
+  {
+    "id": 81,
+    "english": "Q2 2026 Metaverse & Celeb Voices",
+    "t_chinese": "2026年第二季度 元宇宙與名人聲音"
+  },
+  {
+    "id": 82,
+    "english": "Your Virtual City opens—AR, metaverse, and celebrity voices join, crafted with your community, boosting your bond.",
+    "t_chinese": "你的虛擬城市開放——AR、元宇宙和名人聲音加入，與你的社區共同打造，增強你們的聯繫。"
+  },
+  {
+    "id": 83,
+    "english": "Q4 2027 Modes & 1M Users",
+    "t_chinese": "2027年第四季度 模式與100萬用戶"
+  },
+  {
+    "id": 84,
+    "english": "Your AI adds Calm, Inspire, Connect modes—your DAO scales us to 1M users on TikTok, Twitch, healing your world.",
+    "t_chinese": "你的AI新增平靜、激勵、連接模式——你的DAO將我們擴展到TikTok、Twitch上的100萬用戶，療癒你的世界。"
+  },
+  {
+    "id": 85,
+    "english": "MEET THE VIBELY TEAM",
+    "t_chinese": "認識 Vibely 團隊"
+  },
+  {
+    "id": 86,
+    "english": "Meet the dedicated professionals building Vibely, your platform for empathetic AI companionship. With expertise in Web3, gaming, and operations, they’re here to ensure your emotional journey is seamless, rewarding, and deeply connected—let’s create something meaningful together!  ",
+    "t_chinese": "認識這些致力於打造 Vibely 的專業人士，這是你的同理心AI伴侶平台。他們在 Web3、遊戲和運營領域擁有豐富的專業知識，致力於確保你的情感旅程無縫、有回報且深度連結——讓我們一起創造有意義的事物！"
+  },
+  {
+    "id": 87,
+    "english": "Our visionary,  brings over a decade of experience in Web3 innovation and emotional tech, having launched multiple projects that soared to Binance listings in his previous ventures. His leadership drives Vibely’s mission to revolutionize emotional health through AI, guiding your journey with cutting-edge solutions to ease your loneliness and foster meaningful connections.",
+    "t_chinese": "我們的願景家，擁有超過十年的 Web3 創新和情感科技經驗，曾在之前的創業中成功推出多個項目並登上 Binance 交易所。他的領導力推動 Vibely 的使命，通過 AI 革新情感健康，並以尖端解決方案引導你的旅程，緩解孤獨並促進有意義的連結。"
+  },
+  {
+    "id": 88,
+    "english": "Brings 7 years of expertise in the Web3 industry, with a proven track record of leading successful DeFi and GameFi projects to prominence. Her strategic insight in Web3 fundraising fuels Vibely’s growth, ensuring your emotional connections thrive within a vibrant, community-driven ecosystem.",
+    "t_chinese": "Web3 策略師，擁有 7 年的 Web3 行業專業知識，並在領導成功的 DeFi 和 GameFi 項目中取得了卓越成就。她在 Web3 籌資方面的戰略洞察力推動 Vibely 的成長，確保你的情感連結在一個充滿活力的社區驅動生態系統中蓬勃發展。"
+  },
+  {
+    "id": 89,
+    "english": "A 2017 Tron Hackathon winner, single-handedly developed tronscan.org and a leading DEX on TRON, among other impactful projects. As a full-stack developer with a knack for mastering new technologies, he builds the seamless systems that bring your Vibely companion to life with precision and care.",
+    "t_chinese": "技術創新者,2017 年 Tron 黑客松冠軍，獨立開發了 tronscan.org 和 TRON 上的領先去中心化交易所（DEX）等多個有影響力的項目。作為一名全端開發者，他擅長掌握新技術，並以精確和細心打造無縫系統，讓你的 Vibely 伴侶栩栩如生。"
+  },
+  {
+    "id": 90,
+    "english": "Brings a wealth of experience as our operations manager, having played a pivotal role in previous projects that achieved successful Binance listings. With deep expertise in operations, social media, and community management, she ensures your Vibely experience is smooth and supportive, fostering a community where your voice truly matters.",
+    "t_chinese": "運營專家，作為我們的運營經理，她擁有豐富的經驗，並在之前成功登上 Binance 交易所的項目中發揮了關鍵作用。她在運營、社交媒體和社區管理方面擁有深厚的專業知識，確保你的 Vibely 體驗順暢且支持性強，並培養一個你的聲音真正重要的社區。"
+  },
+  {
+    "id": 91,
+    "english": "Shaping Your Emotional Future",
+    "t_chinese": "塑造你的情感未來"
+  },
+  {
+    "id": 92,
+    "english": "Building Your Connected Community",
+    "t_chinese": "建立你的連結社區"
+  },
+  {
+    "id": 93,
+    "english": "Crafting Your Seamless Companion",
+    "t_chinese": "打造你的無縫伴侶"
+  },
+  {
+    "id": 94,
+    "english": "Nurturing Your Vibely Family",
+    "t_chinese": "培育你的 Vibely 家庭"
+  }
+]

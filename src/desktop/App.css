@@ -1,0 +1,53 @@
+/* 添加缩放容器的样式 */
+.scale-container {
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* 确保缩放后的内容不会被裁剪 */
+main {
+  transform-origin: top left;
+  position: relative;
+}
+
+/* 防止内容溢出 */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* 确保页面可以正常滚动 */
+html,
+body {
+  height: auto;
+  min-height: 100%;
+}
+
+/* 自定义滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2c2c2c;
+  border-radius: 4px;
+  border: 2px solid #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3c3c3c;
+}
+
+/* Firefox 滚动条样式 */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2c2c2c #1a1a1a;
+}
